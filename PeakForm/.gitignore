@@ -1,5 +1,5 @@
 # Ignore Visual Studio temporary files, build results, and
-# the `.vs` folder for Visual Studio code.
+# the .vs folder for Visual Studio code.
 .vs/
 *.user
 *.suo
@@ -10,3 +10,34 @@
 *.vsdx
 bin/
 obj/
+
+# Ignore Visual Studio specific files
+*.cache
+*.ilk
+*.log
+*.tlog
+*.ipch
+
+# Ignore backup, temporary, and build artifacts
+*.tmp
+*.iobj
+*.idb
+*.lastbuildstate
+*.exe
+*.dll
+*.dir
+*.exp
+*.lib
+
+# Ignore publish output
+app.publish/
+
+# Ignore NuGet packages
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore Rider specific files (if applicable)
+.idea/
