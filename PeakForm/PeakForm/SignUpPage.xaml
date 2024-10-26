@@ -4,96 +4,137 @@
              x:Class="PeakForm.SignUpPage"
              Title="SignUpPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="#F9E8E5"
-             Padding="20">
+             BackgroundColor="#091423">
 
-    <ScrollView>
-        <VerticalStackLayout Spacing="20">
 
-            <Label Text="Create Account Now!" 
-                   FontSize="32" 
-                   FontAttributes="Bold" 
-                   HorizontalOptions="Center" 
-                   TextColor="#AE1C59" />
+    <VerticalStackLayout Spacing="20">
 
-            <Grid ColumnDefinitions="*, *" RowSpacing="10">
-                <VerticalStackLayout Grid.Column="0" Spacing="5">
-                    <Label Text="First name" 
+        <Label Text="Create Account Now!" 
+               FontSize="30" 
+               FontFamily="Poppins-ExtraBold" 
+               HorizontalOptions="Center" 
+               TextColor="#F2E3E6" 
+               Padding="10"
+               TranslationY="15"/>
+
+        <Grid ColumnDefinitions="*, *" RowSpacing="10">
+            <VerticalStackLayout Grid.Column="0" Spacing="5">
+                <Label Text="First name" 
+                           FontSize="12"
+                           FontFamily="Poppins-Light" 
+                           TextColor="#F2E3E6"
+                           TranslationX="15"/>
+
+                <Frame CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="160" HeightRequest="40">
+                    <Entry  Text="{Binding FirstName}"/>
+                </Frame>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="1" Spacing="5">
+                <Label Text="Last name" 
+                           FontSize="12"
+                           FontFamily="Poppins-Light"
                            FontAttributes="Bold" 
-                           TextColor="#AE1C59"/>
-                    <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9">
-                        <Entry Placeholder="First name" Text="{Binding FirstName}" Margin="10,5" />
-                    </Frame>
-                </VerticalStackLayout>
+                           TextColor="#F2E3E6"
+                           TranslationX="15"/>
 
-                <VerticalStackLayout Grid.Column="1" Spacing="5">
-                    <Label Text="Last name" 
-                           FontAttributes="Bold" 
-                           TextColor="#AE1C59"/>
-                    <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9">
-                        <Entry Placeholder="Last name" Text="{Binding LastName}" Margin="10,5" />
-                    </Frame>
-                </VerticalStackLayout>
-            </Grid>
-            <!--  -->
-            <Label Text="Birthdate" 
-                   FontAttributes="Bold" 
-                   TextColor="#AE1C59"/>
-            <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9">
-                <Entry Placeholder="Months/Day/Year"  Margin="10,5"/>
-            </Frame>
+                <Frame CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9"  WidthRequest="160" HeightRequest="40">
+                    <Entry Text="{Binding LastName}"/>
+                </Frame>
+            </VerticalStackLayout>
+        </Grid>
+        <!--  -->
+        <Label Text="Username" 
+                   FontSize="12"
+                   FontFamily="Poppins-Light"
+                   TextColor="#F2E3E6"
+                   TranslationX="15"/>
+
+        <Frame HasShadow="False" 
+                   CornerRadius="10" 
+                   Padding="0" 
+                   BackgroundColor="#FBF4E9"
+                   WidthRequest="340"
+                   HeightRequest="40"
+                   TranslationY="-15">
+
+            <Entry Placeholder="ex. dragonslayer"/>
+        </Frame>
+
+        <Label Text="Birthdate" 
+                   FontSize="12" 
+                   FontFamily="Poppins-Light"
+                   TextColor="#F2E3E6"
+                   TranslationY="-15"
+                   TranslationX="15"/>
+
+        <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="340" HeightRequest="40" TranslationY="-30">
+            <Entry Placeholder="Months/Day/Year" 
+                       Text="{Binding UserName}"/>
+        </Frame>
+
+        <Label Text="Email" 
+                   FontSize="12"
+                   FontFamily="Poppins-Light"
+                   TextColor="#F2E3E6"
+                   TranslationY="-30"
+                   TranslationX="15"/>
+
+        <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="340" HeightRequest="40" TranslationY="-45">
+            <Entry Placeholder="Email" Text="{Binding Email}"/>
+        </Frame>
+
+        <Label Text="Password" 
+                   FontSize="12"
+                   FontFamily="Poppins-Regular"
+                   TextColor="#F2E3E6"
+                   TranslationX="15"
+                   TranslationY="-50"/>
+
+        <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="340" HeightRequest="40" TranslationY="-60">
+            <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True"/>
+        </Frame>
+
+        <Grid ColumnDefinitions="*, *" RowSpacing="10">
             
-            <Label Text="Username" 
-                   FontAttributes="Bold" 
-                   TextColor="#AE1C59"/>
-            <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9">
-                <Entry Placeholder="ex: dragonSlayer" Text="{Binding UserName}" Margin="10,5"/>
-            </Frame>
+            <VerticalStackLayout Grid.Column="0" Spacing="5" TranslationY="10">
+                <Label Text="Height" 
+                       FontSize="12"
+                       FontFamily="Poppins-Regular" 
+                       TextColor="#F2E3E6"
+                       TranslationX="15"
+                       TranslationY="-65"/>
 
-            <Label Text="Email" 
-                   FontAttributes="Bold" 
-                   TextColor="#AE1C59"/>
-            <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9">
-                <Entry Placeholder="Email" Text="{Binding Email}" Margin="10,5"/>
-            </Frame>
+                <Frame CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="160" HeightRequest="50" TranslationY="-60">
+                    <Entry Placeholder="Height"/>
+                </Frame>
+            </VerticalStackLayout>
 
-            <Label Text="Password" 
-                   FontAttributes="Bold" 
-                   TextColor="#AE1C59"/>
-            <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9">
-                <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" Margin="10,5"/>
-            </Frame>
+            <VerticalStackLayout Grid.Column="1" Spacing="5" TranslationY="10">
+                <Label Text="Weight" 
+                       FontSize="12"
+                       FontFamily="Poppins-Regular"
+                       TextColor="#F2E3E6"
+                       TranslationX="15"
+                       TranslationY="-65"/>
 
-            <Grid ColumnDefinitions="*, *" RowSpacing="10">
-                <VerticalStackLayout Grid.Column="0" Spacing="5">
-                    <Label Text="Height" 
-                           FontAttributes="Bold" 
-                           TextColor="#AE1C59"/>
-                    <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9">
-                        <Entry Placeholder="Height" Margin="10,5" />
-                    </Frame>
-                </VerticalStackLayout>
+                <Frame CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="160" HeightRequest="50" TranslationY="-60">
+                    <Entry Placeholder="Weight"/>
+                </Frame>
+            </VerticalStackLayout>
+        </Grid>
 
-                <VerticalStackLayout Grid.Column="1" Spacing="5">
-                    <Label Text="Weight" 
-                           FontAttributes="Bold" 
-                           TextColor="#AE1C59"/>
-                    <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9">
-                        <Entry Placeholder="Weight" Margin="10,5" />
-                    </Frame>
-                </VerticalStackLayout>
-            </Grid>
+        <Button Text="Next" 
+                BackgroundColor="#41051E" 
+                TextColor="#F2E3E6" 
+                FontSize="20"
+                FontFamily="Poppins-Bold"
+                CornerRadius="20"
+                HeightRequest="50"
+                WidthRequest="330"
+                TranslationY="-35"
+                Clicked="OnSignUpButtonClicked"/>
+        <!--GestureRecognizers="{TapGestureRecognizer Command={Binding SignUp}}"-->
 
-            <Button Text="Next" 
-                    BackgroundColor="#FF3B73" 
-                    TextColor="#FFE84A" 
-                    FontAttributes="Bold" 
-                    CornerRadius="20"
-                    HeightRequest="50"
-                    HorizontalOptions="Fill" 
-                    GestureRecognizers="{TapGestureRecognizer Command={Binding SignUp}}"
-                    />
-
-        </VerticalStackLayout>
-    </ScrollView>
+    </VerticalStackLayout>
 </ContentPage>

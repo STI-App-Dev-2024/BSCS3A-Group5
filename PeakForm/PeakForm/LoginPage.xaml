@@ -3,80 +3,102 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PeakForm.LoginPage"
              Title="LoginPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#091423">
 
-    <ScrollView BackgroundColor="#F2E3E6">
-        <StackLayout Padding="30" Spacing="30" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#F2E3E6" TranslationY="100">
+    <StackLayout Padding="30" Spacing="30" TranslationY="100">
 
-            <Label Text="SIGN IN"
-                   FontSize="28"
-                   HorizontalOptions="Center"
-                   TextColor="#AE1C59"
-                   FontAttributes="Bold" />
+        <Label Text="SIGN IN"
+               FontSize="30"
+               FontFamily="Poppins-ExtraBold"
+               HorizontalOptions="Center"
+               TextColor="#F2E3E6"
+               FontAttributes="Bold" />
 
-            <Label Text="Username"
-                   FontSize="18"
-                   TextColor="#AE1C59"
-                   FontAttributes="Bold" 
-                   TranslationY="25"/>
+        <Label Text="Username"
+               FontSize="15"
+               FontFamily="Poppins-Light"
+               TextColor="#F2E3E6"
+               FontAttributes="Bold" 
+               TranslationY="25"/>
 
-            <Frame CornerRadius="10" HasShadow="False" Padding="0" BackgroundColor="#FFF5E5">
-                <Entry Placeholder="Enter your username"
-                       Text="{Binding Email}"
-                       BackgroundColor="Transparent"
-                       TextColor="Black"
-                       HeightRequest="50" />
-            </Frame>
+        <Frame CornerRadius="10" HasShadow="False" Padding="0">
+            <Entry Text="{Binding Email}"
+                   BackgroundColor="#F8F0E5"
+                   TextColor="Black"
+                   HeightRequest="50"/>
+        </Frame>
 
-            <Label Text="Password"
-                   FontSize="18"
-                   TextColor="#AE1C59"
-                   FontAttributes="Bold" 
-                   TranslationY="25"/>
+        <Label Text="Password"
+               FontSize="15"
+               TextColor="#F2E3E6"
+               FontAttributes="Bold" 
+               TranslationY="25"/>
 
-            <Frame CornerRadius="10" HasShadow="False" Padding="0" BackgroundColor="#FFF5E5">
-                <Entry Placeholder="Enter your password"
-                       Text="{Binding Password}"
-                       IsPassword="True"
-                       BackgroundColor="Transparent"
-                       TextColor="Black"
-                       HeightRequest="50" />
-            </Frame>
+        <Frame CornerRadius="10" HasShadow="False" Padding="0" BackgroundColor="#FFF5E5">
+            <Entry Text="{Binding Password}"
+                   IsPassword="True"
+                   BackgroundColor="#F8F0E5"
+                   TextColor="Black"
+                   HeightRequest="50"/>
+        </Frame>
 
-            <Grid ColumnDefinitions="*,Auto">
-                <HorizontalStackLayout>
-                    <CheckBox VerticalOptions="Center"/>
-                    <Label Text="Remember me" 
+        <Grid ColumnDefinitions="*,Auto">
+            <HorizontalStackLayout>
+                <CheckBox VerticalOptions="Center" Color="#D9D9D9" WidthRequest="20" HeightRequest="20"/>
+                <Label Text="Remember me" 
+                       FontSize="12"
                        VerticalOptions="Center"
-                       TextColor="#AE1C59"
-                       FontAttributes="Bold" />
+                       TextColor="#F2E3E6"
+                       FontAttributes="Bold"
+                       TranslationX="10"/>
 
-                    <Label Text="Forgot password?"
-                       TextColor="#AE1C59"
+                <Label Text="Forgot password?"
+                       FontSize="12"
+                       TextColor="#F2E3E6"
                        FontAttributes="Bold"
                        VerticalOptions="Center"
-                       TranslationX="100"/>
-                </HorizontalStackLayout>
-            </Grid>
+                       TranslationX="90"/>
+            </HorizontalStackLayout>
+        </Grid>
 
-                <Button Text="Login"
-                    BackgroundColor="#EC297B"
-                    TextColor="#FFF48B"
-                    CornerRadius="25"
+        <Frame BackgroundColor="Transparent" HasShadow="True" VerticalOptions="Center" BorderColor="Transparent" CornerRadius="10">
+
+            <Frame.Shadow>
+                <Shadow Brush="#EC297B"
+                Opacity="0.5"
+                Offset="20,20"
+                Radius="50" />
+            </Frame.Shadow>
+
+            <Button Text="Login"
+                    BackgroundColor="#41051E"
+                    TextColor="#F2E3E6"
+                    CornerRadius="10"
                     HeightRequest="50"
+                    WidthRequest="330"
                     FontAttributes="Bold"
-                    GestureRecognizers="{TapGestureRecognizer Command={Binding Login}}"/>
+                    Clicked="OnLoginButtonClicked"/>
+        </Frame>
+        <!--GestureRecognizers="{TapGestureRecognizer Command={Binding Login}}"-->
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Text="Don't have an account?" 
-                       TextColor="Black" 
-                       FontSize="14"/>
-                <Label Text="Sign Up" 
-                       TextColor="#AE1C59" 
-                       FontSize="14" 
-                       FontAttributes="Bold"
-                       GestureRecognizers="{TapGestureRecognizer Command={Binding SignUpCommand}}" />
-            </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Don't have an account?" 
+                   TextColor="#F2E3E6" 
+                   FontSize="12"/>
+
+            <Label Text="Sign Up" 
+                   TextColor="#EC297B" 
+                   FontSize="12" 
+                   FontAttributes="Bold"
+                   TranslationX="10">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLabelTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <!--GestureRecognizers="{TapGestureRecognizer Command={Binding SignUpCommand}}"-->
         </StackLayout>
-    </ScrollView>
+    </StackLayout>
+    
 </ContentPage>

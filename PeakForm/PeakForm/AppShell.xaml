@@ -27,12 +27,12 @@
         ContentTemplate="{DataTemplate local:SignUpPage}"
         Route="SignUpPage"/>
 
-    <ShellContent
+    <!--<ShellContent
     Title="ProfilePage"
     ContentTemplate="{DataTemplate local:ProfilePage}"
     Route="ProfilePage"/>
 
-    <!--<TabBar>
+    <TabBar>
         <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
         </Tab>

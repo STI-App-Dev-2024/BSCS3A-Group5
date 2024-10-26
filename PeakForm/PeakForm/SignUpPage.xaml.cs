@@ -10,4 +10,8 @@ public partial class SignUpPage : ContentPage
 		InitializeComponent();
 		BindingContext = new SignUpViewModel(Navigation);
 	}
+
+	private async void OnSignUpButtonClicked(object sender, EventArgs e) {
+		await Navigation.PushAsync(new LoginPage());
+	}
 }
