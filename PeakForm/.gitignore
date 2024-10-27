@@ -1,5 +1,4 @@
-# Ignore Visual Studio temporary files, build results, and
-# the .vs folder for Visual Studio code.
+# Ignore Visual Studio temporary files, build results, and the .vs folder for Visual Studio code.
 .vs/
 *.user
 *.suo
@@ -41,3 +40,14 @@ artifacts/
 
 # Ignore Rider specific files (if applicable)
 .idea/
+
+# Additional patterns to ignore files from your screenshot
+# Ignore additional Visual Studio temporary and metadata files
+*.backup.json
+*.bin
+*.v2
+*.v9.bin
+*.strings.v9.bin
+*.metadata.v9.bin
+*.projects.v9.bin
+
