@@ -7,6 +7,9 @@
 *.obj
 *.log
 *.vsdx
+*.json
+*.bin
+*.v2
 bin/
 obj/
 

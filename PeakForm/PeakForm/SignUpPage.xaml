@@ -133,8 +133,8 @@
                 HeightRequest="50"
                 WidthRequest="330"
                 TranslationY="-35"
-                Clicked="OnSignUpButtonClicked"/>
-        <!--GestureRecognizers="{TapGestureRecognizer Command={Binding SignUp}}"-->
+                GestureRecognizers="{TapGestureRecognizer Command={Binding SignUp}}"/>
+
 
     </VerticalStackLayout>
 </ContentPage>

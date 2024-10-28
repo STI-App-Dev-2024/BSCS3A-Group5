@@ -46,6 +46,7 @@ public class LoginViewModel : INotifyPropertyChanged
             var content = await auth.GetFreshAuthAsync();
             var serializedContent = JsonConvert.SerializeObject(content);
             Preferences.Set("FreshFirebaseToken", serializedContent);
+            await App.Current.MainPage.DisplayAlert("Alert!", "User Registerd Succesfully", "OK");
             await this._navigation.PushAsync(new HomePage());
         } 
         catch (Exception ex) {

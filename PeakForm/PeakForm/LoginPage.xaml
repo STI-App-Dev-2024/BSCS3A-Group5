@@ -78,9 +78,9 @@
                     HeightRequest="50"
                     WidthRequest="330"
                     FontAttributes="Bold"
-                    Clicked="OnLoginButtonClicked"/>
+                    GestureRecognizers="{TapGestureRecognizer Command={Binding Login}}"/>
         </Frame>
-        <!--GestureRecognizers="{TapGestureRecognizer Command={Binding Login}}"-->
+        
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
             <Label Text="Don't have an account?" 
@@ -97,7 +97,6 @@
                     <TapGestureRecognizer Tapped="OnLabelTapped" />
                 </Label.GestureRecognizers>
             </Label>
-            <!--GestureRecognizers="{TapGestureRecognizer Command={Binding SignUpCommand}}"-->
         </StackLayout>
     </StackLayout>
     

@@ -46,7 +46,7 @@ public class SignUpViewModel : INotifyPropertyChanged{
             var auth = await authprovider.CreateUserWithEmailAndPasswordAsync(email, password);
             string token = auth.FirebaseToken;
             if (token != null) {
-                await App.Current.MainPage.DisplayAlert("Aler", "User Registerd Succesfully", "OK");
+                await App.Current.MainPage.DisplayAlert("Alert!", "User Registerd Succesfully", "OK");
                 await this._navigation.PushAsync(new LoginPage());
             }
             

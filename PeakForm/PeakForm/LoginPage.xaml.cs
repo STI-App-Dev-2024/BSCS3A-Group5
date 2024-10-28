@@ -10,11 +10,6 @@ public partial class LoginPage : ContentPage
 		BindingContext = new LoginViewModel(Navigation);
 	}
 
-    private async void OnLoginButtonClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new HomePage());
-    }
-
     private async void OnLabelTapped(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new SignUpPage());
