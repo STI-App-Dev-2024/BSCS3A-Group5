@@ -1,14 +1,18 @@
 using PeakForm.ViewModel;
+using PeakForm.Services;
 
 namespace PeakForm;
 
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class SignUpPage : ContentPage
 {
-	public SignUpPage()
-	{
-		InitializeComponent();
+    public SignUpPage()
+    {
+	
+        InitializeComponent();
 		BindingContext = new SignUpViewModel(Navigation);
+		
+		
 	}
 
 	private async void OnSignUpButtonClicked(object sender, EventArgs e) {

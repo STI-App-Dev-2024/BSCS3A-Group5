@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\viewmodel\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\viewmodel\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,40 +11,60 @@
       "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\aboutpage2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\aboutpage2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\aboutpage2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\aboutpage2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\aboutpage2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\aboutpage2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\viewmodel\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\viewmodel\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\model\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\model\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|solutionrelative:peakform\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9BD04D4-8FCE-411B-9F61-50EC51B8598F}|PeakForm\\PeakForm.csproj|c:\\users\\john kristoffer\\desktop\\pfgithub\\bscs3a-peakform\\peakform\\peakform\\aboutpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -78,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,20 +94,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "PeakForm\\LoginPage.xaml",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\LoginPage.xaml",
-              "RelativeToolTip": "PeakForm\\LoginPage.xaml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGAAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-27T08:55:26.275Z",
+              "DocumentIndex": 7,
+              "Title": "SignUpViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\ViewModel\\SignUpViewModel.cs",
+              "RelativeDocumentMoniker": "PeakForm\\ViewModel\\SignUpViewModel.cs",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\ViewModel\\SignUpViewModel.cs",
+              "RelativeToolTip": "PeakForm\\ViewModel\\SignUpViewModel.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T06:14:49.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "AuthServices.cs",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\Services\\AuthServices.cs",
+              "RelativeDocumentMoniker": "PeakForm\\Services\\AuthServices.cs",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\Services\\AuthServices.cs",
+              "RelativeToolTip": "PeakForm\\Services\\AuthServices.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T15:05:59.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\ViewModel\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "PeakForm\\ViewModel\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\ViewModel\\LoginViewModel.cs",
+              "RelativeToolTip": "PeakForm\\ViewModel\\LoginViewModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwCYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T06:12:56.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AboutPage2.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage2.xaml.cs",
+              "RelativeDocumentMoniker": "PeakForm\\AboutPage2.xaml.cs",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage2.xaml.cs",
+              "RelativeToolTip": "PeakForm\\AboutPage2.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T14:30:42.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AboutPage2.xaml",
               "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage2.xaml",
               "RelativeDocumentMoniker": "PeakForm\\AboutPage2.xaml",
@@ -112,145 +159,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AppShell.xaml",
-              "RelativeDocumentMoniker": "PeakForm\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AppShell.xaml",
-              "RelativeToolTip": "PeakForm\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-11T13:37:52.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainActivity.cs",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\Platforms\\Android\\MainActivity.cs",
-              "RelativeDocumentMoniker": "PeakForm\\Platforms\\Android\\MainActivity.cs",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\Platforms\\Android\\MainActivity.cs",
-              "RelativeToolTip": "PeakForm\\Platforms\\Android\\MainActivity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T14:18:42.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "LoginPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "PeakForm\\LoginPage.xaml.cs",
               "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\LoginPage.xaml.cs",
               "RelativeToolTip": "PeakForm\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T15:29:27.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SignUpPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\SignUpPage.xaml.cs",
               "RelativeDocumentMoniker": "PeakForm\\SignUpPage.xaml.cs",
               "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\SignUpPage.xaml.cs",
               "RelativeToolTip": "PeakForm\\SignUpPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T14:24:56.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\ViewModel\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "PeakForm\\ViewModel\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\ViewModel\\LoginViewModel.cs",
-              "RelativeToolTip": "PeakForm\\ViewModel\\LoginViewModel.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAgwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:12:56.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SignUpViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\ViewModel\\SignUpViewModel.cs",
-              "RelativeDocumentMoniker": "PeakForm\\ViewModel\\SignUpViewModel.cs",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\ViewModel\\SignUpViewModel.cs",
-              "RelativeToolTip": "PeakForm\\ViewModel\\SignUpViewModel.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAA9wDAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:14:49.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AboutPage2.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage2.xaml.cs",
-              "RelativeDocumentMoniker": "PeakForm\\AboutPage2.xaml.cs",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage2.xaml.cs",
-              "RelativeToolTip": "PeakForm\\AboutPage2.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T14:30:42.55Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\App.xaml",
-              "RelativeDocumentMoniker": "PeakForm\\App.xaml",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\App.xaml",
-              "RelativeToolTip": "PeakForm\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "PeakForm\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\LoginPage.xaml",
+              "RelativeToolTip": "PeakForm\\LoginPage.xaml",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-11T14:36:35.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AboutPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage.xaml.cs",
-              "RelativeDocumentMoniker": "PeakForm\\AboutPage.xaml.cs",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage.xaml.cs",
-              "RelativeToolTip": "PeakForm\\AboutPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T05:54:56.272Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SignUpPage.xaml",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\SignUpPage.xaml",
-              "RelativeDocumentMoniker": "PeakForm\\SignUpPage.xaml",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\SignUpPage.xaml",
-              "RelativeToolTip": "PeakForm\\SignUpPage.xaml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAIUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T14:24:48.863Z",
+              "WhenOpened": "2024-10-27T08:55:26.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\App.xaml.cs",
-              "RelativeDocumentMoniker": "PeakForm\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\App.xaml.cs",
-              "RelativeToolTip": "PeakForm\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "MainActivity.cs",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\Platforms\\Android\\MainActivity.cs",
+              "RelativeDocumentMoniker": "PeakForm\\Platforms\\Android\\MainActivity.cs",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\Platforms\\Android\\MainActivity.cs",
+              "RelativeToolTip": "PeakForm\\Platforms\\Android\\MainActivity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:19:22.988Z"
+              "WhenOpened": "2024-10-11T14:18:42.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AppShell.xaml",
+              "RelativeDocumentMoniker": "PeakForm\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AppShell.xaml",
+              "RelativeToolTip": "PeakForm\\AppShell.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-11T13:37:52.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "PeakForm\\AppShell.xaml.cs",
@@ -262,7 +234,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\App.xaml.cs",
+              "RelativeDocumentMoniker": "PeakForm\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\App.xaml.cs",
+              "RelativeToolTip": "PeakForm\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T06:19:22.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\App.xaml",
+              "RelativeDocumentMoniker": "PeakForm\\App.xaml",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\App.xaml",
+              "RelativeToolTip": "PeakForm\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-11T14:36:35.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserAccount.cs",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\Model\\UserAccount.cs",
+              "RelativeDocumentMoniker": "PeakForm\\Model\\UserAccount.cs",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\Model\\UserAccount.cs",
+              "RelativeToolTip": "PeakForm\\Model\\UserAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T08:22:36.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AboutPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage.xaml.cs",
+              "RelativeDocumentMoniker": "PeakForm\\AboutPage.xaml.cs",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage.xaml.cs",
+              "RelativeToolTip": "PeakForm\\AboutPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T05:54:56.272Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "SignUpPage.xaml",
+              "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\SignUpPage.xaml",
+              "RelativeDocumentMoniker": "PeakForm\\SignUpPage.xaml",
+              "ToolTip": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\SignUpPage.xaml",
+              "RelativeToolTip": "PeakForm\\SignUpPage.xaml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAIUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-26T14:24:48.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "AboutPage.xaml",
               "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\AboutPage.xaml",
               "RelativeDocumentMoniker": "PeakForm\\AboutPage.xaml",
@@ -274,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "MainApplication.cs",
               "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\Platforms\\Android\\MainApplication.cs",
               "RelativeDocumentMoniker": "PeakForm\\Platforms\\Android\\MainApplication.cs",
@@ -286,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "PeakForm.csproj",
               "DocumentMoniker": "C:\\Users\\John Kristoffer\\Desktop\\PFGitHub\\BSCS3A-PeakForm\\PeakForm\\PeakForm\\PeakForm.csproj",
               "RelativeDocumentMoniker": "PeakForm\\PeakForm.csproj",
