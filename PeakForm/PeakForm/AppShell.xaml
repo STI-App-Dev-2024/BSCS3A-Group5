@@ -32,6 +32,16 @@
         ContentTemplate="{DataTemplate local:HomePage}"
         Route="HomePage"/>
 
+    <ShellContent
+        Title="'QuestPage"
+        ContentTemplate="{DataTemplate local:QuestPage}"
+        Route="QuestPage"/>
+
+    <ShellContent
+        Title="'QuestInfoPage"
+        ContentTemplate="{DataTemplate local:QuestInfoPage}"
+        Route="QuestInfoPage"/>
+
     <!--<ShellContent
     Title="ProfilePage"
     ContentTemplate="{DataTemplate local:ProfilePage}"

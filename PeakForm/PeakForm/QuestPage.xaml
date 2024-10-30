@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeakForm.QuestPage"
+             Title="QuestPage"
+             BackgroundColor="#353F54">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Quest"
+                   FontSize="30"
+                   FontFamily="Poppins-ExtraBold"
+                   HorizontalOptions="Center"
+                   Padding="20"
+                   TextColor="#F7D1D9"/>
+
+                <Label Text="Today's Quest"
+                   FontSize="20"
+                   FontFamily="OpenSans-SemiBold"
+                   TextColor="#F7D1D9"
+                   HorizontalOptions="Start"
+                   Padding="15"
+                   TranslationY="15"/>
+
+                <Grid>
+                    <Image Source="rec_bg.png"
+                       WidthRequest="360"
+                       HeightRequest="150"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="10"/>
+
+                    <Label Text="Endurance Training"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="#F2E3E6"
+                       FontSize="25"
+                       FontFamily="Poppins-Regular"/>
+                </Grid>
+
+                <Label Text="Quest History"
+                   FontSize="20"
+                   FontFamily="Poppins-SemiBold"
+                   TextColor="#F7D1D9"
+                   Padding="15"/>
+
+                <Grid TranslationY="-15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Row="0" WidthRequest="320" HeightRequest="100" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                        <Label VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+
+                                    <Span Text="You have " 
+                                      TextColor="#FFFFFF" 
+                                      FontSize="20" 
+                                      FontFamily="Poppins-Bold"/>
+
+                                    <Span Text="completed " 
+                                      TextColor="#06FF51" 
+                                      FontSize="20" 
+                                      FontFamily="Poppins-Bold" />
+
+                                    <Span Text="this quest" 
+                                      TextColor="#FFFFFF" 
+                                      FontSize="20" 
+                                      FontFamily="Poppins-Bold"/>
+
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Frame>
+
+                    <Frame Grid.Row="1" WidthRequest="320" HeightRequest="100" BackgroundColor="#41051E" BorderColor="Transparent" Margin="5">
+                        <Label VerticalOptions="Center" >
+                            <Label.FormattedText>
+                                <FormattedString>
+
+                                    <Span Text="You have failed to " 
+                          TextColor="#FFFFFF" 
+                          FontSize="18" 
+                          FontFamily="Poppins-Bold"/>
+
+                                    <Span Text="completed " 
+                          TextColor="#FF0000" 
+                          FontSize="18" 
+                          FontFamily="Poppins-Bold" />
+
+                                    <Span Text="this quest" 
+                          TextColor="#FFFFFF" 
+                          FontSize="18" 
+                          FontFamily="Poppins-Bold"/>
+
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Frame>
+
+                    <Frame Grid.Row="2" WidthRequest="320" HeightRequest="100" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                        <Label VerticalOptions="Center" >
+                            <Label.FormattedText>
+                                <FormattedString>
+
+                                    <Span Text="You have " 
+                                      TextColor="#FFFFFF" 
+                                      FontSize="20" 
+                                      FontFamily="Poppins-Bold"/>
+
+                                    <Span Text="completed " 
+                                      TextColor="#06FF51" 
+                                      FontSize="20" 
+                                      FontFamily="Poppins-Bold" />
+
+                                    <Span Text="this quest" 
+                                      TextColor="#FFFFFF" 
+                                      FontSize="20" 
+                                      FontFamily="Poppins-Bold"/>
+
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Frame>
+                </Grid>
+
+            <ImageButton Source="close_btn.png"
+                         HorizontalOptions="Center"
+                         Padding="10"
+                         Clicked="CloseButtonClicked"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

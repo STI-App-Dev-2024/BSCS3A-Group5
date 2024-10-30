@@ -65,9 +65,12 @@
 	  <None Remove="Resources\Fonts\Poppins-Light.ttf" />
 	  <None Remove="Resources\Images\bg_home.png" />
 	  <None Remove="Resources\Images\bnw_image.png" />
+	  <None Remove="Resources\Images\close_btn.png" />
 	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\info_bg.png" />
 	  <None Remove="Resources\Images\points_icon.png" />
 	  <None Remove="Resources\Images\prof_img.png" />
+	  <None Remove="Resources\Images\rec_bg.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -98,6 +101,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="QuestInfoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="QuestPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="SignUpPage.xaml">
