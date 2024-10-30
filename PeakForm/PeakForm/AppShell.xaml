@@ -27,6 +27,11 @@
         ContentTemplate="{DataTemplate local:SignUpPage}"
         Route="SignUpPage"/>
 
+    <ShellContent
+        Title="'HomePage"
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage"/>
+
     <!--<ShellContent
     Title="ProfilePage"
     ContentTemplate="{DataTemplate local:ProfilePage}"

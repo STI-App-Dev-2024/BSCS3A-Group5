@@ -63,8 +63,10 @@
 	  <None Remove="Resources\Fonts\Poppins-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-ExtraBold.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Light.ttf" />
+	  <None Remove="Resources\Images\bg_home.png" />
 	  <None Remove="Resources\Images\bnw_image.png" />
 	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\points_icon.png" />
 	  <None Remove="Resources\Images\prof_img.png" />
 	</ItemGroup>
 
