@@ -1,9 +1,13 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Google.Api.Gax;
+using Google.Cloud.Firestore;
+using Microsoft.Extensions.Logging;
 
 namespace PeakForm
 {
-    public static class MauiProgram
+    public class MauiProgram
     {
+        
+
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
@@ -20,6 +24,9 @@ namespace PeakForm
 #endif
 
             return builder.Build();
+
         }
+        
+       
     }
 }

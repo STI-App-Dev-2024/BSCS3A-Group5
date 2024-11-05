@@ -58,7 +58,9 @@
                    HeightRequest="40"
                    TranslationY="-15">
 
-            <Entry Placeholder="ex. dragonslayer"/>
+            <Entry Placeholder="ex. dragonslayer"
+                   Text="{Binding UserName}"
+                   />
         </Frame>
 
         <Label Text="Birthdate" 
@@ -69,8 +71,7 @@
                    TranslationX="15"/>
 
         <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="340" HeightRequest="40" TranslationY="-30">
-            <Entry Placeholder="Months/Day/Year" 
-                       Text="{Binding UserName}"/>
+            <DatePicker Date="{Binding BirthDate}" />
         </Frame>
 
         <Label Text="Email" 
@@ -94,6 +95,17 @@
         <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="340" HeightRequest="40" TranslationY="-60">
             <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True"/>
         </Frame>
+        <Label Text="Confirm Password" 
+           FontSize="12"
+           FontFamily="Poppins-Regular"
+           TextColor="#F2E3E6"
+           TranslationX="15"
+           TranslationY="-50"/>
+
+        <Frame HasShadow="False" CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="340" HeightRequest="40" TranslationY="-60">
+            <Entry Placeholder="Password" Text="{Binding ConfirmPassword}" IsPassword="True"/>
+        </Frame>
+
 
         <Grid ColumnDefinitions="*, *" RowSpacing="10">
             
@@ -106,7 +118,9 @@
                        TranslationY="-65"/>
 
                 <Frame CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="160" HeightRequest="50" TranslationY="-60">
-                    <Entry Placeholder="Height"/>
+                    <Entry Placeholder="Height"
+                           Text="{Binding Height}"
+                           />
                 </Frame>
             </VerticalStackLayout>
 
@@ -119,7 +133,9 @@
                        TranslationY="-65"/>
 
                 <Frame CornerRadius="10" Padding="0" BackgroundColor="#FBF4E9" WidthRequest="160" HeightRequest="50" TranslationY="-60">
-                    <Entry Placeholder="Weight"/>
+                    <Entry Placeholder="Weight"
+                           Text="{Binding Weight}"
+                           />
                 </Frame>
             </VerticalStackLayout>
         </Grid>

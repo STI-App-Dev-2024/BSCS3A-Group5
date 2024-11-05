@@ -1,12 +1,13 @@
 ﻿using Firebase.Auth;
 using Newtonsoft.Json;
+using PeakForm.Model;
 
 namespace PeakForm.Services;
 
 public class AuthServices{
     private string WebAPIKey = "AIzaSyCexbVR5gHKyMCms0xryoFjTCeQB9UHg8Q";
     private readonly INavigation _navigationService;
-
+    
     public AuthServices(INavigation navigationService)
     {
         _navigationService = navigationService;
@@ -24,18 +25,32 @@ public class AuthServices{
         }
         catch (Exception ex)
         {
-            await Shell.Current.DisplayAlert("Alert", ex.Message, "OK");
-            throw;
+            await Shell.Current.DisplayAlert("Alert!", ex.Message, "OK");
         }
     }
-    public async Task Register(string Email, string Password) {
+    public async Task Register(string firstname, string lastName,string userName,DateOnly birthdate ,string email, string password, float height, float weight) {
         try
         {
+            var _firebaseStoreServices = new FireStoreServices();
             var authprovider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIKey));
-            var auth = await authprovider.CreateUserWithEmailAndPasswordAsync(Email, Password);
+            var auth = await authprovider.CreateUserWithEmailAndPasswordAsync(email, password);
             string token = auth.FirebaseToken;
+            string uid = auth.User.LocalId;
             if (token != null)
             {
+                var userAccount = new UserAccount{
+                    Uid = uid,
+                    FirstName = firstname,
+                    LastName = lastName,
+                    UserName = userName,
+                 // Birthdate = birthdate,
+                    Email = email,
+                    Height = height,
+                    Weight = weight,
+                    CreateAt = DateTime.Now
+
+                };
+                await _firebaseStoreServices.CreateAccount(userAccount);
                 await  Shell.Current.DisplayAlert("Alert!", "User Registerd Succesfully", "OK");
                 await _navigationService.PushAsync(new LoginPage());
             }
@@ -43,7 +58,6 @@ public class AuthServices{
         catch (Exception ex)
         {
             await Shell.Current.DisplayAlert("Alert", ex.Message, "OK");
-            throw;
         }
     }
 

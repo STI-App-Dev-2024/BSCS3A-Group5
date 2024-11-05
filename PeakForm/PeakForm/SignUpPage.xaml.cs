@@ -1,5 +1,7 @@
 using PeakForm.ViewModel;
 using PeakForm.Services;
+using Google.Api.Gax;
+using Google.Cloud.Firestore;
 
 namespace PeakForm;
 
@@ -14,6 +16,7 @@ public partial class SignUpPage : ContentPage
 		
 		
 	}
+	
 
 	private async void OnSignUpButtonClicked(object sender, EventArgs e) {
 		await Navigation.PushAsync(new LoginPage());

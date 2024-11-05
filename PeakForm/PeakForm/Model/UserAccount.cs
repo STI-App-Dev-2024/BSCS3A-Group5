@@ -1,66 +1,43 @@
 ﻿
+using Google.Cloud.Firestore;
+
 namespace PeakForm.Model;
-
+[FirestoreData]
 public class UserAccount {
-    private int account_id;
-    private int _id;
-    private string _name;
-    private string _email;
-    private string _password;
-    private string username;
+    [FirestoreProperty]
+    public string Uid {  get; set; }
+    [FirestoreProperty]
+    public string FirstName { get; set; }
+    [FirestoreProperty]
+    public string LastName { get; set; }
+    [FirestoreProperty]
+    public string UserName { get; set; }
+    [FirestoreProperty]
+    public string Email { get; set; }
+ // [FirestoreProperty]
+ // public DateOnly Birthdate { get; set; }   
+    [FirestoreProperty]
+    public float Height { get; set; }
+    [FirestoreProperty]
+    public float Weight {  get; set; }
+    [FirestoreProperty]
+    public DateTime CreateAt { get; set; }
 
-    public UserAccount(int Account_id,int Id, string Name, string Email, string Password, string Username){
-        this._id = Id;
-        this._name = Name;
-        this._email = Email;
-        this._password = Password;
-        this.username = Username;
-    }
-    public int Account_id {
-        set { 
-            this.Account_id = value;
+
+ 
+   
+}
+public class DateTimeToTimeStampConverter : IFirestoreConverter<DateTime>
+{
+    public object ToFirestore(DateTime value) => Timestamp.FromDateTime(value.ToUniversalTime());
+
+    public DateTime FromFirestore(object value)
+    {
+        if (value is Timestamp timestamp)
+        {
+            return timestamp.ToDateTime();
         }
-        get {
-            return this.Account_id;
-        }
-    }
-    public int Id { 
-        set {
-            _id = value;
-        } get{ 
-            return _id;
-        }
-    }
-    public string Name {
-        set {
-            _name = value;
-        } 
-        get {
-            return _name;
-        }
-    }
-    public string Email {
-        set {
-            _email = value;
-        } 
-        get {
-            return _email;
-        } 
-    }
-    public string Password {
-        set { 
-            _password = value;
-        } 
-        get { 
-            return _password;
-        } 
-    }
-    public string UserName {
-        set {
-            username = value;
-        } 
-        get {
-            return username;
-        }
+        throw new ArgumentException("INVALID VALUE!");
     }
 }
+
