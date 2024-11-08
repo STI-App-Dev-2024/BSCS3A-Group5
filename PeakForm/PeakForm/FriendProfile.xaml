@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeakForm.FriendProfile"
+             Title="FriendProfile"
+             BackgroundColor="#18191E">
+
+    <StackLayout>
+        <Grid>
+            <Image 
+                Source="bnw_image.png"
+                Aspect="AspectFill"
+                HeightRequest="200"/>
+
+            <StackLayout 
+                Orientation="Horizontal"
+                VerticalOptions="End"
+                Padding="10">
+                <Image 
+                    Source="prof_img.png"
+                    WidthRequest="181"
+                    HeightRequest="118"
+                    Aspect="AspectFill"/>
+
+                <VerticalStackLayout BackgroundColor="#D9D9D9"
+                                     WidthRequest="181"
+                                     HeightRequest="118">
+                    <Label 
+                        Text="John Kristoffer Miranda"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        TextColor="#000000"
+                        WidthRequest="169"/>
+
+                    <Label 
+                        Text="ernest.Jameson@gmail.com"
+                        FontSize="10"
+                        TextColor="#000000"
+                        WidthRequest="151"
+                        TranslationY="5"/>
+
+                    <Label Text="UID:123456"
+                           TextColor="Black"
+                           FontSize="12"
+                           Padding="10"/>
+
+                    <Label Text="ELITE"
+                           TextColor="#41051E"
+                           FontSize="25"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"/>
+
+                </VerticalStackLayout>
+            </StackLayout>
+        </Grid>
+
+        <VerticalStackLayout BackgroundColor="#41051E"
+                             HeightRequest="102">
+            <Label 
+                Text="ABOUT"
+                FontAttributes="Bold"
+                FontSize="14"
+                TextColor="White"
+                Margin="20,10,0,0"/>
+
+            <Label 
+                Text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, itaque atque reprehenderi..."
+                FontSize="12"
+                Margin="20,0,20,0"
+                TextColor="White"
+                WidthRequest="266"
+                HeightRequest="45"/>    
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <HorizontalStackLayout Grid.Column="0">
+                    <Label Text="Achievements"
+                            FontSize="15"
+                            FontFamily="Poppins-Bold"
+                            TextColor="#F2E3E6"
+                            TranslationX="15"
+                            TranslationY="20"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Grid.Column="1">
+                    <Label Text="View All"
+                            TextColor="#F2E3E6"
+                            FontSize="15"
+                            FontFamily="Poppins-Regular"
+                            TranslationY="20"
+                            TranslationX="70"
+                            Margin="0,0,0,45">
+                    </Label>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ScrollView Orientation="Horizontal" Grid.ColumnSpan="3" TranslationY="-20">
+                    <HorizontalStackLayout>
+                        <Frame WidthRequest="200" HeightRequest="60" Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="Transparent" Margin="5">
+
+                        </Frame>
+
+                        <Frame WidthRequest="200" HeightRequest="60" Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="Transparent" Margin="5">
+
+                        </Frame>
+
+                        <Frame WidthRequest="200" HeightRequest="60" Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="Transparent" Margin="5">
+
+                        </Frame>
+                    </HorizontalStackLayout>
+                </ScrollView>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ScrollView Orientation="Horizontal" Grid.ColumnSpan="3" TranslationY="-20">
+                    <HorizontalStackLayout>
+                        <Frame WidthRequest="200" HeightRequest="60" Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="Transparent" Margin="5">
+
+                        </Frame>
+
+                        <Frame WidthRequest="200" HeightRequest="60" Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="Transparent" Margin="5">
+
+                        </Frame>
+
+                        <Frame WidthRequest="200" HeightRequest="60" Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="Transparent" Margin="5">
+
+                        </Frame>
+                    </HorizontalStackLayout>
+                </ScrollView>
+            </Grid>
+
+            <Button Text="FRIENDS"
+                     WidthRequest="300"
+                     HeightRequest="40"
+                     Margin="10,0,10,10"
+                     BackgroundColor="#0F469A"/>
+        </VerticalStackLayout>
+    </StackLayout>
+      
+</ContentPage>

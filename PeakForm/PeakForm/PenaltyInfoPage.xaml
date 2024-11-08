@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeakForm.PenaltyInfoPage"
+             Title="PenaltyInfoPage"
+             BackgroundImageSource="peninfo_bg">
+
+    <StackLayout>
+        <Grid>
+            <Image Source="peninfo_bg"
+                   HorizontalOptions="Center"
+                   WidthRequest="320"
+                   HeightRequest="580">
+
+                <Image.Shadow>
+                    <Shadow Brush="#6C2E7C"
+                Offset="20,20"
+                Opacity="0.5" />
+                </Image.Shadow>
+               
+            </Image>
+
+            <Label Text="Penalty Info" 
+                   HorizontalOptions="Center"
+                   FontSize="30"
+                   TextColor="#F2E3E6"
+                   TranslationY="50"/>
+
+            <Label Text="Warning!"
+                   FontSize="20"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   TextColor="Red"
+                   TranslationY="160"/>
+
+            <Label Text="Not completing the daily quest will lead to an unsuitable penalty."
+                   FontSize="15"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   TranslationY="200"
+                   WidthRequest="200"/>
+        </Grid>
+
+        <ImageButton Source="close_btn"/>
+    </StackLayout>
+</ContentPage>

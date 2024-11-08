@@ -68,7 +68,11 @@
 	  <None Remove="Resources\Images\close_btn.png" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\info_bg.png" />
+	  <None Remove="Resources\Images\medal_icon.png" />
+	  <None Remove="Resources\Images\penalty_bg.png" />
+	  <None Remove="Resources\Images\peninfo_bg.png" />
 	  <None Remove="Resources\Images\points_icon.png" />
+	  <None Remove="Resources\Images\prof_ellipse.png" />
 	  <None Remove="Resources\Images\prof_img.png" />
 	  <None Remove="Resources\Images\rec_bg.png" />
 	  <None Remove="Resources\Raw\Admin-Sdk.json" />
@@ -96,13 +100,28 @@
 	  <MauiXaml Update="AboutPage2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="FriendProfile.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Joggingpage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="PenaltyInfoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PenaltyPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PushUpPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="QuestInfoPage.xaml">
@@ -111,7 +130,16 @@
 	  <MauiXaml Update="QuestPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="RewardsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="SignUpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="SitUpsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

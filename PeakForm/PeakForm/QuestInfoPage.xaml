@@ -4,8 +4,92 @@
              x:Class="PeakForm.QuestInfoPage"
              Title="QuestInfoPage"
              BackgroundImageSource="info_bg.png">
+    
+    <StackLayout VerticalOptions="Center">
+        <Grid>
 
-    <StackLayout>
+            <Image Source="your_background_image.jpg" 
+               Aspect="AspectFill" 
+               Opacity="0.8"
+               Grid.RowSpan="3"
+               Grid.ColumnSpan="3" />
 
+
+            <Frame Padding="20"
+               CornerRadius="10"
+               BackgroundColor="Transparent"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               WidthRequest="300"
+               HeightRequest="500"
+               HasShadow="True">
+                <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
+
+                    <Label Text="QUEST INFO!" 
+                       FontAttributes="Bold" 
+                       FontSize="24" 
+                       HorizontalOptions="Center"
+                       TextColor="White"/>
+
+                    <Label Text="GOAL" 
+                       FontAttributes="Bold" 
+                       FontSize="18" 
+                       HorizontalOptions="Center"
+                       TextColor="White"/>
+
+
+                    <VerticalStackLayout Spacing="5">
+                        <Grid ColumnDefinitions="*,Auto" Margin="10">
+                            <Label Text="RUNNING" TextColor="White" FontSize="16" Grid.Column="0"/>
+                            <Label Text="[0/5KM]" TextColor="White" FontSize="16" Grid.Column="1" HorizontalOptions="End"/>
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,Auto" Margin="10">
+                            <Label Text="PUSH-UPS" TextColor="White" FontSize="16" Grid.Column="0"/>
+                            <Label Text="[0/30]" TextColor="White" FontSize="16" Grid.Column="1" HorizontalOptions="End"/>
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,Auto" Margin="10">
+                            <Label Text="BURPEES" TextColor="White" FontSize="16" Grid.Column="0"/>
+                            <Label Text="[0/50]" TextColor="White" FontSize="16" Grid.Column="1" HorizontalOptions="End"/>
+                        </Grid>
+                    </VerticalStackLayout>
+
+                    <Label HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="Center"
+                       TranslationY="50">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <!-- "WARNING!" in bold and red on its own line -->
+                                <Span Text="WARNING!\n" 
+                                  FontAttributes="Bold" 
+                                  TextColor="Red" 
+                                  FontSize="14"/>
+
+                                <Span Text="Not completing the daily quest will lead to an unsuitable " 
+                                  TextColor="White" 
+                                  FontSize="14"/>
+                                <Span Text="penalty." 
+                                  TextColor="Red" 
+                                  FontSize="14"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Button Text="START" 
+                        BackgroundColor="#288A8E" 
+                        TextColor="White"
+                        FontAttributes="Bold" 
+                        CornerRadius="10"
+                        WidthRequest="200"
+                        HorizontalOptions="Center"
+                        TranslationY="50"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+
+        <ImageButton Source="close_btn"
+                     TranslationY="15"/>
     </StackLayout>
+
 </ContentPage>

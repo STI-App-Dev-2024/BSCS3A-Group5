@@ -5,7 +5,7 @@
              Title="HomePage"
              BackgroundImageSource="bg_home.png">
 
-    <ScrollView Orientation="Vertical">
+    <ScrollView>
         <StackLayout>
             <HorizontalStackLayout>
                 <Label x:Name="FullName"
@@ -119,12 +119,12 @@
 
                 <HorizontalStackLayout Grid.Column="1">
                     <Label Text="View All"
-                       TextColor="#F2E3E6"
-                       FontSize="20"
-                       FontFamily="Poppins-Regular"
-                       TranslationY="20"
-                       TranslationX="60"
-                       Margin="0,0,0,45">
+                           TextColor="#F2E3E6"
+                           FontSize="20"
+                           FontFamily="Poppins-Regular"
+                           TranslationY="20"
+                           TranslationX="60"
+                           Margin="0,0,0,45">
 
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnViewAllPenaltyTapped"/>
@@ -158,11 +158,11 @@
             </Grid>
 
             <Label Text="Shop"
-               TextColor="White"
-               FontSize="20"
-               FontFamily="Poppins-Regular"
-               Padding="10"
-               TranslationY="-30"/>
+                   TextColor="White"
+                   FontSize="20"
+                   FontFamily="Poppins-Regular"
+                   Padding="10"
+                   TranslationY="-30"/>
 
             <StackLayout Padding="20" BackgroundColor="#0F469A" WidthRequest="340" HeightRequest="30" TranslationY="-35">
                 <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Start">
@@ -202,35 +202,43 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="White" CornerRadius="10">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
-                            <Label Text="Item 1" FontSize="16" TextColor="#582A72" />
-                            <Image Source="points_icon.png" WidthRequest="20" HeightRequest="20" />
-                            <Label Text="20" FontSize="16" TextColor="#582A72" />
+                    <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="White" CornerRadius="10" Padding="0" HeightRequest="80">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                            <Label Text="Remove Penalty" FontSize="16" TextColor="#582A72" HorizontalTextAlignment="Center" Padding="10"/>
+                            <HorizontalStackLayout>
+                                <Image Source="points_icon.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" Margin="0,10,0,0" TranslationX="35" TranslationY="-10"/>
+                                <Label Text="25" FontSize="20" TextColor="#582A72" TranslationX="40" TranslationY="-5"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>  
+                    </Frame>
+
+                    <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="White" CornerRadius="10" Padding="0" HeightRequest="80">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                            <Label Text="Remove Quest" FontSize="16" TextColor="#582A72" HorizontalTextAlignment="Center" Padding="10"/>
+                            <HorizontalStackLayout>
+                                <Image Source="points_icon.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" Margin="0,10,0,0" TranslationX="35" TranslationY="-10"/>
+                                <Label Text="30" FontSize="20" TextColor="#582A72" TranslationX="40" TranslationY="-5"/>
+                            </HorizontalStackLayout>
                         </StackLayout>
                     </Frame>
 
-                    <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="White" CornerRadius="10">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
-                            <Label Text="Item 2" FontSize="16" TextColor="#582A72" />
-                            <Image Source="points_icon.png" WidthRequest="20" HeightRequest="20" />
-                            <Label Text="10" FontSize="16" TextColor="#582A72" />
+                    <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="White" CornerRadius="10" Padding="0" HeightRequest="80">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                            <Label Text="Protect Merit" FontSize="16" TextColor="#582A72" HorizontalTextAlignment="Center" Padding="10"/>
+                            <HorizontalStackLayout>
+                                <Image Source="points_icon.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" Margin="0,10,0,0" TranslationX="35" TranslationY="-10"/>
+                                <Label Text="35" FontSize="20" TextColor="#582A72" TranslationX="40" TranslationY="-5"/>
+                            </HorizontalStackLayout>
                         </StackLayout>
                     </Frame>
 
-                    <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="White" CornerRadius="10">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
-                            <Label Text="Item 3" FontSize="16" TextColor="#582A72" />
-                            <Image Source="points_icon.png" WidthRequest="20" HeightRequest="20" />
-                            <Label Text="20" FontSize="16" TextColor="#582A72" />
-                        </StackLayout>
-                    </Frame>
-
-                    <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="White" CornerRadius="10">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
-                            <Label Text="Item 4" FontSize="16" TextColor="#582A72" />
-                            <Image Source="points_icon.png" WidthRequest="20" HeightRequest="20" />
-                            <Label Text="100" FontSize="16" TextColor="#582A72" />
+                    <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="White" CornerRadius="10" Padding="0" HeightRequest="80">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                            <Label Text="Skip Quest" FontSize="16" TextColor="#582A72" HorizontalTextAlignment="Center" Padding="10"/>
+                            <HorizontalStackLayout TranslationX="-10">
+                                <Image Source="points_icon.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" Margin="0,10,0,0" TranslationX="35" TranslationY="-10"/>
+                                <Label Text="50" FontSize="20" TextColor="#582A72" TranslationX="40" TranslationY="-5"/>
+                            </HorizontalStackLayout>
                         </StackLayout>
                     </Frame>
                 </Grid>

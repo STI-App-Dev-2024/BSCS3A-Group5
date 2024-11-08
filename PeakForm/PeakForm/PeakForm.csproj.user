@@ -3,8 +3,8 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net8.0-android34.0</ActiveDebugFramework>
-    <ActiveDebugProfile>Pixel 5 - API 34 (Android 14.0 - API 34)</ActiveDebugProfile>
-    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
+    <ActiveDebugProfile>OPPO CPH1903 (Android 8.1 - API 27)</ActiveDebugProfile>
+    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <DefaultDevice>pixel_5_-_api_34</DefaultDevice>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetPlatformIdentifier)'=='iOS'">
@@ -15,10 +15,25 @@
     <MauiXaml Update="AboutPage2.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="FriendProfile.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="HomePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Joggingpage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="PenaltyInfoPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="PenaltyPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="PushUpPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="QuestInfoPage.xaml">
@@ -27,7 +42,16 @@
     <MauiXaml Update="QuestPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="RewardsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="SignUpPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="SitUpsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

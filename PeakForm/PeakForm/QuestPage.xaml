@@ -49,24 +49,24 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Frame Grid.Row="0" WidthRequest="320" HeightRequest="100" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
-                        <Label VerticalOptions="Center">
+                    <Frame Grid.Row="0" WidthRequest="320" HeightRequest="70" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                        <Label VerticalOptions="Center" HorizontalOptions="Center">
                             <Label.FormattedText>
                                 <FormattedString>
 
                                     <Span Text="You have " 
                                       TextColor="#FFFFFF" 
-                                      FontSize="20" 
+                                      FontSize="15" 
                                       FontFamily="Poppins-Bold"/>
 
                                     <Span Text="completed " 
                                       TextColor="#06FF51" 
-                                      FontSize="20" 
+                                      FontSize="15" 
                                       FontFamily="Poppins-Bold" />
 
                                     <Span Text="this quest" 
                                       TextColor="#FFFFFF" 
-                                      FontSize="20" 
+                                      FontSize="15" 
                                       FontFamily="Poppins-Bold"/>
 
                                 </FormattedString>
@@ -74,49 +74,49 @@
                         </Label>
                     </Frame>
 
-                    <Frame Grid.Row="1" WidthRequest="320" HeightRequest="100" BackgroundColor="#41051E" BorderColor="Transparent" Margin="5">
-                        <Label VerticalOptions="Center" >
+                    <Frame Grid.Row="1" WidthRequest="320" HeightRequest="70" BackgroundColor="#41051E" BorderColor="Transparent" Margin="5">
+                        <Label VerticalOptions="Center" HorizontalOptions="Center">
                             <Label.FormattedText>
                                 <FormattedString>
 
                                     <Span Text="You have failed to " 
-                          TextColor="#FFFFFF" 
-                          FontSize="18" 
-                          FontFamily="Poppins-Bold"/>
+                                          TextColor="#FFFFFF" 
+                                          FontSize="15" 
+                                          FontFamily="Poppins-Bold"/>
 
                                     <Span Text="completed " 
-                          TextColor="#FF0000" 
-                          FontSize="18" 
-                          FontFamily="Poppins-Bold" />
+                                          TextColor="#FF0000" 
+                                          FontSize="15" 
+                                          FontFamily="Poppins-Bold" />
 
                                     <Span Text="this quest" 
-                          TextColor="#FFFFFF" 
-                          FontSize="18" 
-                          FontFamily="Poppins-Bold"/>
+                                          TextColor="#FFFFFF" 
+                                          FontSize="15" 
+                                          FontFamily="Poppins-Bold"/>
 
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
                     </Frame>
 
-                    <Frame Grid.Row="2" WidthRequest="320" HeightRequest="100" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
-                        <Label VerticalOptions="Center" >
+                    <Frame Grid.Row="2" WidthRequest="320" HeightRequest="70" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                        <Label VerticalOptions="Center" HorizontalOptions="Center" >
                             <Label.FormattedText>
                                 <FormattedString>
 
                                     <Span Text="You have " 
                                       TextColor="#FFFFFF" 
-                                      FontSize="20" 
+                                      FontSize="15" 
                                       FontFamily="Poppins-Bold"/>
 
                                     <Span Text="completed " 
                                       TextColor="#06FF51" 
-                                      FontSize="20" 
+                                      FontSize="15" 
                                       FontFamily="Poppins-Bold" />
 
                                     <Span Text="this quest" 
                                       TextColor="#FFFFFF" 
-                                      FontSize="20" 
+                                      FontSize="15" 
                                       FontFamily="Poppins-Bold"/>
 
                                 </FormattedString>
