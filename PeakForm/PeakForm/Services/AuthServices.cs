@@ -31,7 +31,7 @@ public class AuthServices{
     public async Task Register(string firstname, string lastName,string userName,DateOnly birthdate ,string email, string password, float height, float weight) {
         try
         {
-            var _firebaseStoreServices = new FireStoreServices();
+            var _firebaseStoreServices = new FireStoreServices(_navigationService);
             var authprovider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIKey));
             var auth = await authprovider.CreateUserWithEmailAndPasswordAsync(email, password);
             string token = auth.FirebaseToken;

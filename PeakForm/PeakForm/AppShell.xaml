@@ -53,7 +53,7 @@
          Route="PushUpPage"/>
     <ShellContent
          Title="JoggingPage"
-         ContentTemplate="{DataTemplate local:JoggingPage}"
+         ContentTemplate="{DataTemplate local:Joggingpage}"
          Route="JoggingPage"/>
 
     <ShellContent

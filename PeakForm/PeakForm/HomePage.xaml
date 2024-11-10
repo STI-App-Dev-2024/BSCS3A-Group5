@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PeakForm.HomePage"
+             xmlns:local="clr-namespace:PeakForm.Model"
              Title="HomePage"
              BackgroundImageSource="bg_home.png">
 
@@ -85,21 +86,18 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <ScrollView Orientation="Horizontal" Grid.ColumnSpan="3">
-                    <HorizontalStackLayout>
-                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
-                            <Label Text="Quest 1" TextColor="White"/>
-                        </Frame>
-
-                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
-                            <Label Text="Quest 2" TextColor="White"/>
-                        </Frame>
-
-                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
-                            <Label Text="Quest 3" TextColor="White"/>
-                        </Frame>
-                    </HorizontalStackLayout>
-                </ScrollView>
+                <ListView ItemsSource="{Binding QuestItems}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10"
+                                       BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                                    <Label Text="{Binding Quest}" TextColor="White"/>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </Grid>
 
             <Grid>
@@ -140,21 +138,19 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <ScrollView Orientation="Horizontal" Grid.ColumnSpan="3" TranslationY="-30">
-                    <HorizontalStackLayout>
-                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#41051E" BorderColor="Transparent" Margin="5">
-                            <Label Text="Penalty 1" TextColor="White"/>
-                        </Frame>
+                <ListView ItemsSource="{Binding Penalty}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:Name="DoubleLineData" x:DataType="local:Quests">
+                            <ViewCell>
+                                <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10"
+                                       BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                                    <Label Text="{Binding PenaltyItems}" TextColor="White"/>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                   </ListView>
 
-                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#41051E" BorderColor="Transparent" Margin="5">
-                            <Label Text="Penalty 2" TextColor="White"/>
-                        </Frame>
-
-                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#41051E" BorderColor="Transparent" Margin="5">
-                            <Label Text="Penalty 3" TextColor="White"/>
-                        </Frame>
-                    </HorizontalStackLayout>
-                </ScrollView>
             </Grid>
 
             <Label Text="Shop"
@@ -163,6 +159,7 @@
                    FontFamily="Poppins-Regular"
                    Padding="10"
                    TranslationY="-30"/>
+                
 
             <StackLayout Padding="20" BackgroundColor="#0F469A" WidthRequest="340" HeightRequest="30" TranslationY="-35">
                 <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Start">

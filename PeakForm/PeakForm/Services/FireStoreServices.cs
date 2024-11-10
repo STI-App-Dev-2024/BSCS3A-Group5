@@ -2,16 +2,26 @@
 using Google.Api.Gax;
 using Google.Cloud.Firestore;
 using PeakForm.Model;
+using System.Collections.ObjectModel;
 namespace PeakForm.Services;
 
-class FireStoreServices{
+class FireStoreServices {
 
 
     private FirestoreDb db;
+
+    public ObservableCollection<Quests> QuestItems { get; private set; }
+    public ObservableCollection<Penalty> PenaltyItems { get; private set; }
+    private readonly INavigation _navigationFireServices;
+    public FireStoreServices(INavigation navigation) {
+        _navigationFireServices = navigation;
+    } 
     private async Task SetUpFireStore() {
+        QuestItems = new ObservableCollection<Quests>();
+        Penalty = new ObservableCollection<Penalty>();
         if (db == null) {
             var stream = await FileSystem.OpenAppPackageFileAsync("admin-sdk.json");
-            var reader = new StreamReader(stream);  
+            var reader = new StreamReader(stream);
             var contents = reader.ReadToEnd();
             db = new FirestoreDbBuilder
             {
@@ -23,7 +33,7 @@ class FireStoreServices{
                 JsonCredentials = contents
             }.Build();
         }
-    
+
     }
 
     public async Task CreateAccount(UserAccount useraccount) {
@@ -31,17 +41,40 @@ class FireStoreServices{
         await db.Collection("UserAccount").AddAsync(useraccount);
     }
 
-    public async Task<T?> GetDocumentAsync<T>(string collectionName, string documentId) where T : class
+    public async void RetrieveQuestData()
     {
-        DocumentReference docRef = db.Collection(collectionName).Document(documentId);
-        DocumentSnapshot snapshot = await docRef.GetSnapshotAsync();
-        if (snapshot.Exists)
+        Query allItemsQuery = db.Collection("Quest");  // Replace with your collection name
+        QuerySnapshot snapshot = await allItemsQuery.GetSnapshotAsync();
+
+        foreach (DocumentSnapshot document in snapshot.Documents)
         {
-            T data = snapshot.ConvertTo<T>();
-            return data;
+            if (document.Exists)
+            {
+                Quests qs = document.ConvertTo<Quests>();
+                QuestItems.Add(qs);
+            }
         }
-  
-        return null;
+    }
+    public async void RetrievePenaltiesData() {
+        Query allItemQuery = db.Collection("PenaltyItems");
+        QuerySnapshot snapshot = await allItemQuery.GetSnapshotAsync();   
+        foreach (DocumentSnapshot document in snapshot.Documents)
+        {
+            if (document.Exists)
+            {
+                
+                    // Map Firestore data to your PenaltyItem model
+                    var penaltyItem = new Penalty
+                    {
+                        PenaltyItems = document.GetString("PenaltyItems")
+                    };
+
+                    // Add each item to the ObservableCollection
+                    PenaltyItems.Add(penaltyItem);
+                
+            }
+        }
+
     }
 
     public async Task DeleteDocumentAsync(string collectionName, string documentId)
