@@ -94,6 +94,7 @@ public class SignUpViewModel : INotifyPropertyChanged{
     private async void RegisterUserTappedAsysnc(object obj)
     {
         AuthServices _authServices = new AuthServices(_navigationService);
+        GenerateExercises generate = new GenerateExercises(_navigationService);
         bool Check = Password.Equals(ConfirmPassword);
         string message = "Password not match";
         string nullMessage = "The following fields are null: ";

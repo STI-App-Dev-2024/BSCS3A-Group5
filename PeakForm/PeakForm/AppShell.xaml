@@ -50,42 +50,7 @@
     <ShellContent
          Title="PushUpPage"
          ContentTemplate="{DataTemplate local:PushUpPage}"
-         Route="PushUpPage"/>
-    <ShellContent
-         Title="JoggingPage"
-         ContentTemplate="{DataTemplate local:Joggingpage}"
-         Route="JoggingPage"/>
-
-    <ShellContent
-         Title="SitUpsPage"
-         ContentTemplate="{DataTemplate local:SitUpsPage}"
-         Route="SitUpsPage"/>
-
-    <ShellContent
-         Title="RewardsPage"
-         ContentTemplate="{DataTemplate local:RewardsPage}"
-         Route="RewardsPage"/>
-
-    <ShellContent
-         Title="SettingsPage"
-         ContentTemplate="{DataTemplate local:SettingsPage}"
-         Route="SettingsPage"/>
-
-    <ShellContent
-        Title="'QuestInfoPage"
-        ContentTemplate="{DataTemplate local:QuestInfoPage}"
-        Route="QuestInfoPage"/>
-
-    <ShellContent
-        Title="ProfilePage"
-        ContentTemplate="{DataTemplate local:ProfilePage}"
-        Route="ProfilePage"/>
-
-    <ShellContent
-        Title="FriendProfile"
-        ContentTemplate="{DataTemplate local:FriendProfile}"
-        Route="FriendProfile"/>
-
+         Route="PushUpPage"/> 
     <!--<TabBar>
         <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />

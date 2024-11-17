@@ -14,6 +14,7 @@ public class AuthServices{
     }
     public async Task Login(string Email, string Password) {
         var authprovider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIKey));
+        
         try
         {
             var auth = await authprovider.SignInWithEmailAndPasswordAsync(Email, Password);
@@ -32,6 +33,8 @@ public class AuthServices{
         try
         {
             var _firebaseStoreServices = new FireStoreServices(_navigationService);
+            var generate = new GenerateExercises(_navigationService);
+            var bmi = new BMI();
             var authprovider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIKey));
             var auth = await authprovider.CreateUserWithEmailAndPasswordAsync(email, password);
             string token = auth.FirebaseToken;
@@ -39,7 +42,7 @@ public class AuthServices{
             if (token != null)
             {
                 var userAccount = new UserAccount{
-                    Uid = uid,
+                    ID = uid,
                     FirstName = firstname,
                     LastName = lastName,
                     UserName = userName,
@@ -50,7 +53,17 @@ public class AuthServices{
                     CreateAt = DateTime.Now
 
                 };
+                var user = new Users { 
+                    ID = uid,
+                    UserName = userName,
+                    BMI = bmi.CalculateBMI(weight, height),
+                    BodyType = bmi.InterpretBMI(bmi.CalculateBMI(weight, height)),
+                    CreateAt = DateTime.Now
+                };
+               
+                var exercise = generate.GenerateExercise(bmi.InterpretBMI(bmi.CalculateBMI(weight, height)));
                 await _firebaseStoreServices.CreateAccount(userAccount);
+                await _firebaseStoreServices.CreateUserAndExercise(user, exercise);
                 await  Shell.Current.DisplayAlert("Alert!", "User Registerd Succesfully", "OK");
                 await _navigationService.PushAsync(new LoginPage());
             }
@@ -60,5 +73,9 @@ public class AuthServices{
             await Shell.Current.DisplayAlert("Alert", ex.Message, "OK");
         }
     }
+    
+    
+
+
 
 }

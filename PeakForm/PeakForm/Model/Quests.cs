@@ -2,8 +2,14 @@
 using Google.Cloud.Firestore;
 
 namespace PeakForm.Model;
+[FirestoreData]
 public class Quests
 {
+    [FirestoreProperty]
+    public string Id { 
+        get; 
+        set; 
+    }
     [FirestoreProperty]
     public string Title
     {
@@ -16,6 +22,7 @@ public class Quests
         get;
         set;
     }
+    
 
 
     

@@ -5,7 +5,7 @@ namespace PeakForm.Model;
 [FirestoreData]
 public class UserAccount {
     [FirestoreProperty]
-    public string Uid {  get; set; }
+    public string ID {  get; set; }
     [FirestoreProperty]
     public string FirstName { get; set; }
     [FirestoreProperty]

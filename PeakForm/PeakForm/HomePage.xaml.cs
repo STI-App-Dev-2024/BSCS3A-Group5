@@ -1,4 +1,6 @@
+
 using PeakForm.Model;
+using PeakForm.Services;
 using PeakForm.ViewModel;
 using System.Collections.ObjectModel;
 
@@ -6,26 +8,30 @@ namespace PeakForm;
 
 public partial class HomePage : ContentPage
 {
- 
+    FireStoreServices fireStoreServices;
+
+    
     public HomePage()
     {
         InitializeComponent();
-        DisplayWelcomeMessage();
         BindingContext = new HomePageViewModel(Navigation);
-        
+
     }
-    private void DisplayWelcomeMessage()
+
+    protected override async void OnAppearing()
     {
-        //Get first and last name bruh
-        /*
-        string firstName = Preferences.Get("FirstName", "Guest");
-        string lastName = Preferences.Get("LastName", "");
-        string fullName = $"{firstName} {lastName}".Trim();
-        
-        //Full name bruh
-        FullName.Text = $"{fullName}";
-        */
+        base.OnAppearing();
+
+        // Access the ViewModel if it's set as the BindingContext
+        var viewModel = BindingContext as HomePageViewModel;
+
+        if (viewModel != null)
+        {
+            // Call the ViewModel's LoadItemsAsync method
+          //  await viewModel.LoadItemsAsync();
+        }
     }
+
 
     private async void OnFullNameTapped(object sender, EventArgs e)
     {

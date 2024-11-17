@@ -1,5 +1,5 @@
 ﻿
-using Google.Api.Gax;
+using Firebase.Auth;
 using Google.Cloud.Firestore;
 using PeakForm.Model;
 using System.Collections.ObjectModel;
@@ -9,7 +9,7 @@ class FireStoreServices {
 
 
     private FirestoreDb db;
-
+   
     public ObservableCollection<Quests> QuestItems { get; private set; }
     public ObservableCollection<Penalty> PenaltyItems { get; private set; }
     private readonly INavigation _navigationFireServices;
@@ -17,8 +17,6 @@ class FireStoreServices {
         _navigationFireServices = navigation;
     } 
     private async Task SetUpFireStore() {
-        QuestItems = new ObservableCollection<Quests>();
-        Penalty = new ObservableCollection<Penalty>();
         if (db == null) {
             var stream = await FileSystem.OpenAppPackageFileAsync("admin-sdk.json");
             var reader = new StreamReader(stream);
@@ -32,50 +30,134 @@ class FireStoreServices {
                 },
                 JsonCredentials = contents
             }.Build();
+        
         }
 
     }
 
     public async Task CreateAccount(UserAccount useraccount) {
+        if (useraccount == null) throw new ArgumentNullException(nameof(useraccount));
         await SetUpFireStore();
-        await db.Collection("UserAccount").AddAsync(useraccount);
-    }
+        string username = useraccount.UserName;
+        DocumentReference userdoc = db.Collection("UserAccount").Document(username);
+        try {
+            await userdoc.SetAsync(useraccount);
+        }
+        catch (Exception e) {
+            Console.WriteLine($"Error saving data: {e.Message}");
+        }
 
-    public async void RetrieveQuestData()
+
+    }
+    public async Task CreateUserAndExercise(Users user, Exercises exercise)
     {
-        Query allItemsQuery = db.Collection("Quest");  // Replace with your collection name
-        QuerySnapshot snapshot = await allItemsQuery.GetSnapshotAsync();
+        if (user == null) throw new ArgumentNullException(nameof(user));
+        if (exercise == null) throw new ArgumentNullException(nameof(exercise));
 
-        foreach (DocumentSnapshot document in snapshot.Documents)
+        await SetUpFireStore(); // Ensure this is optimized and not redundantly called.
+
+        string username = user.UserName;
+        string exerciseTitle = exercise.Title;
+
+        // Document reference
+        DocumentReference userDoc = db.Collection("User").Document(username);
+        DocumentReference exerciseDoc = userDoc.Collection("Quest").Document(exerciseTitle);
+    
+
+        try
         {
-            if (document.Exists)
-            {
-                Quests qs = document.ConvertTo<Quests>();
-                QuestItems.Add(qs);
-            }
+            // Save the exercise object
+            await userDoc.SetAsync(user);
+            await exerciseDoc.SetAsync(exercise);
+            Console.WriteLine("Exercise data saved successfully.");
+            Console.WriteLine("added Document ID {0}" , userDoc.Id, exerciseDoc.Id);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving data: {ex.Message}");
+            // Additional error handling (e.g., retry or logging)
         }
     }
-    public async void RetrievePenaltiesData() {
-        Query allItemQuery = db.Collection("PenaltyItems");
-        QuerySnapshot snapshot = await allItemQuery.GetSnapshotAsync();   
-        foreach (DocumentSnapshot document in snapshot.Documents)
-        {
-            if (document.Exists)
+
+    /* public async Task StartListeningToCollection(string collectionName, Action<List<Dictionary<string, object>>> onDataUpdate)
+     {
+         await SetUpFireStore();
+         var collectionReference = db.Collection(collectionName);
+
+         // Listen for real-time updates
+         collectionReference.Listen(snapshot =>
+         {
+             var dataList = new List<Dictionary<string, object>>();
+
+             foreach (var documentSnapshot in snapshot.Documents)
+             {
+                 var data = documentSnapshot.ToDictionary();
+                 dataList.Add(data);
+             }
+
+             // Call the provided action with updated data
+             onDataUpdate(dataList);
+         });
+     }*/
+    public async Task<List<Exercises>> GetExercises(string username)
+    {
+        await SetUpFireStore();
+        var data = await db
+                        .Collection("User").Document(username).Collection("Quest")
+                        .GetSnapshotAsync();
+        var exercises = data.Documents
+            .Select(doc =>
             {
-                
-                    // Map Firestore data to your PenaltyItem model
-                    var penaltyItem = new Penalty
-                    {
-                        PenaltyItems = document.GetString("PenaltyItems")
-                    };
-
-                    // Add each item to the ObservableCollection
-                    PenaltyItems.Add(penaltyItem);
-                
-            }
-        }
-
+                var exercises = doc.ConvertTo<Exercises>();
+                exercises.ID = doc.Id; // FirebaseId hinzufügen
+                return exercises;
+            })
+            .ToList();
+        return exercises;
     }
+    public async Task<List<string>> GetStringsAsync(string username)
+    {
+        try
+        {
+            await SetUpFireStore();
+            CollectionReference docref = db.Collection("User")
+                .Document(username)
+                .Collection("Quest");
+            QuerySnapshot snapshot = await docref.GetSnapshotAsync();
+            return snapshot.Documents.Select(doc => doc.Id).ToList();
+        }
+        catch (Exception ex) {
+            Console.WriteLine($"Error retrieving exercise titles: {ex.Message}");
+            return new List<string>();
+        }
+    }
+   /* public async Task<string> GetUserNameAync()
+    {
+            
+        await SetUpFireStore();
+        DocumentReference data = db.Collection("UserAccount").GetSnapshotAsync();
+
+        try {
+            DocumentSnapshot snapshot = await data.GetSnapshotAsync();
+            if (snapshot.Exists)
+            {
+                Console.WriteLine("Document data for {0} document:", snapshot.Id);
+                UserAccount Useraccount = snapshot.ConvertTo<UserAccount>();
+                return Useraccount.UserName;
+
+
+            }
+            else {
+                return null;
+            
+            }
+
+        } catch (Exception e) {
+            return "Document {0} does not exist!";
+
+        }
+    }*/
+
 
     public async Task DeleteDocumentAsync(string collectionName, string documentId)
     {

@@ -1,4 +1,7 @@
-﻿namespace PeakForm
+﻿using PeakForm.newWindow;
+using PeakForm.ViewModel;
+
+namespace PeakForm
 {
     public partial class App : Application
     {
@@ -6,7 +9,8 @@
         {
             InitializeComponent();
 
-            MainPage = new HomePage();
+            MainPage = new AppShell();
         }
+      
     }   
 }

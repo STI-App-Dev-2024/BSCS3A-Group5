@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PeakForm.HomePage"
              xmlns:local="clr-namespace:PeakForm.Model"
+             xmlns:vm="clr-namespace:PeakForm.ViewModel"
+             x:DataType="vm:HomePageViewModel"
              Title="HomePage"
              BackgroundImageSource="bg_home.png">
 
@@ -60,7 +62,8 @@
                        FontFamily="Poppins-Regular"
                        TextColor="#F2E3E6"
                        TranslationX="15"
-                       TranslationY="50"/>
+                       TranslationY="50">
+                    </Label>
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout Grid.Column="1">
@@ -86,18 +89,19 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <ListView ItemsSource="{Binding QuestItems}" HasUnevenRows="True">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
+                <CollectionView ItemsSource="{Binding QuestData}" Grid.ColumnSpan="3">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Quests">
+                            <HorizontalStackLayout>
                                 <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10"
-                                       BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
-                                    <Label Text="{Binding Quest}" TextColor="White"/>
+                                   BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                                    <Label Text="{Binding Title}" TextColor="White"/>
                                 </Frame>
-                            </ViewCell>
+                            </HorizontalStackLayout>
                         </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                
             </Grid>
 
             <Grid>
@@ -138,18 +142,18 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <ListView ItemsSource="{Binding Penalty}" HasUnevenRows="True">
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:Name="DoubleLineData" x:DataType="local:Quests">
-                            <ViewCell>
+                <CollectionView ItemsSource="{Binding PenaltyData}" Grid.ColumnSpan="3">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Quests">
+                            <HorizontalStackLayout>
                                 <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10"
                                        BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
-                                    <Label Text="{Binding PenaltyItems}" TextColor="White"/>
+                                    <Label Text="{Binding Title}" TextColor="White"/>
                                 </Frame>
-                            </ViewCell>
+                            </HorizontalStackLayout>
                         </DataTemplate>
-                    </ListView.ItemTemplate>
-                   </ListView>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
             </Grid>
 

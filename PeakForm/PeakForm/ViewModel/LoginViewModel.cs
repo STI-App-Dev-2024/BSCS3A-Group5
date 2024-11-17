@@ -1,47 +1,32 @@
-﻿using System.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using PeakForm.Services;
 
 namespace PeakForm.ViewModel;
 
-public class LoginViewModel : INotifyPropertyChanged
+public partial class LoginViewModel : ObservableObject 
 {
-    
-    private string email;
-    private string password;    
+    [ObservableProperty]
+    string email;
+    [ObservableProperty]
+    string password;
     private readonly INavigation _navigationService;
     
-    public string Email
-    {
-        get => email;
-        set
-        {
-            email = value;
-            RaisePropertyChanged(nameof(Email));
-        }
-    }
-    public string Password {
-        get => password;
-        set {
-            password = value;
-            RaisePropertyChanged(nameof(Password));
-        }
-    }
-    public Command Login { get; }
+   
+  
+    
     public LoginViewModel(INavigation navigation)
     {
         _navigationService = navigation;
-        Login = new Command(LoginUserTappedAsysnc);
+        
     }
-
+    [RelayCommand]
     private async void LoginUserTappedAsysnc(object obj)
     {
         AuthServices _authServices = new AuthServices(_navigationService);
         await _authServices.Login(Email, Password);
+        
     }
-    public event PropertyChangedEventHandler? PropertyChanged;
-    private void RaisePropertyChanged(string v)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(v));
-    }
+    
 
 }
