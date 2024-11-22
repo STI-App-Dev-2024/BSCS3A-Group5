@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeakForm.LoginPage"
+             Title="LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#091423">
+
+    <StackLayout Padding="30" Spacing="30" TranslationY="100">
+
+        <Label Text="SIGN IN"
+               FontSize="30"
+               FontFamily="Poppins-ExtraBold"
+               HorizontalOptions="Center"
+               TextColor="#F2E3E6"
+               FontAttributes="Bold" />
+
+        <Label Text="Username"
+               FontSize="15"
+               FontFamily="Poppins-Light"
+               TextColor="#F2E3E6"
+               FontAttributes="Bold" 
+               TranslationY="25"/>
+
+        <Frame CornerRadius="10" HasShadow="False" Padding="0">
+            <Entry Text="{Binding Email}"
+                   BackgroundColor="#F8F0E5"
+                   TextColor="Black"
+                   HeightRequest="50"/>
+        </Frame>
+
+        <Label Text="Password"
+               FontSize="15"
+               TextColor="#F2E3E6"
+               FontAttributes="Bold" 
+               TranslationY="25"/>
+
+        <Frame CornerRadius="10" HasShadow="False" Padding="0" BackgroundColor="#FFF5E5">
+            <Entry Text="{Binding Password}"
+                   IsPassword="True"
+                   BackgroundColor="#F8F0E5"
+                   TextColor="Black"
+                   HeightRequest="50"/>
+        </Frame>
+
+        <Grid ColumnDefinitions="*,Auto">
+            <HorizontalStackLayout>
+                <CheckBox VerticalOptions="Center" Color="#D9D9D9" WidthRequest="20" HeightRequest="20"/>
+                <Label Text="Remember me" 
+                       FontSize="12"
+                       VerticalOptions="Center"
+                       TextColor="#F2E3E6"
+                       FontAttributes="Bold"
+                       TranslationX="10"/>
+
+                <Label Text="Forgot password?"
+                       FontSize="12"
+                       TextColor="#F2E3E6"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TranslationX="90"/>
+            </HorizontalStackLayout>
+        </Grid>
+
+        <Frame BackgroundColor="Transparent" HasShadow="True" VerticalOptions="Center" BorderColor="Transparent" CornerRadius="10">
+
+            <Frame.Shadow>
+                <Shadow Brush="#EC297B"
+                Opacity="0.5"
+                Offset="20,20"
+                Radius="50" />
+            </Frame.Shadow>
+
+            <Button Text="Login"
+                    BackgroundColor="#41051E"
+                    TextColor="#F2E3E6"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    WidthRequest="330"
+                    FontAttributes="Bold"
+                    GestureRecognizers="{TapGestureRecognizer Command={Binding Login}}"/>
+        </Frame>
+        
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Don't have an account?" 
+                   TextColor="#F2E3E6" 
+                   FontSize="12"/>
+
+            <Label Text="Sign Up" 
+                   TextColor="#EC297B" 
+                   FontSize="12" 
+                   FontAttributes="Bold"
+                   TranslationX="10">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLabelTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+    
+    
+</ContentPage>

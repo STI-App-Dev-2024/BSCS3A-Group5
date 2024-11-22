@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeakForm.Joggingpage"
+             Title="Joggingpage"
+             BackgroundColor="#091423">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Push Ups"
+           FontSize="50"
+           FontFamily="poppins-Bold"
+           TextColor="#F7D1D9"
+           HorizontalOptions="Center"
+           Padding="5"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <HorizontalStackLayout>
+                    <Button Text="Pushups"
+                        Grid.Column="0"
+                        WidthRequest="115"
+                        HeightRequest="60"
+                        Margin="2"
+                        CornerRadius="10"
+                        BackgroundColor="White"
+                            TextColor="Black"/>
+
+                    <Button Text="Jogging"
+                        Grid.Column="1"
+                        WidthRequest="115"
+                        HeightRequest="60"
+                        Margin="2"
+                        CornerRadius="10"
+                        BackgroundColor="#41051E"/>
+
+                    <Button Text="Sit-Ups"
+                        Grid.Column="2"
+                        WidthRequest="115"
+                        HeightRequest="60"
+                        Margin="2"
+                        CornerRadius="10"
+                        BackgroundColor="White"
+                        TextColor="Black"/>
+
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Frame Grid.Row="0" WidthRequest="330" HeightRequest="80" CornerRadius="20" BackgroundColor="#353F54" BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
+
+                    <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
+                        <Image Source="prof_ellipse" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" />
+                        <Label Text="Ernest_123" TextColor="White" FontSize="16" VerticalOptions="Center" />
+                        <Image Source="medal_icon" TranslationX="45"/>
+                        <Label Text="23,423" VerticalOptions="Center" TranslationX="35" TextColor="White"/>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Grid.Row="1" WidthRequest="330" HeightRequest="70" CornerRadius="20" BackgroundColor="#353F54" BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
+                    <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
+                        <Image Source="prof_ellipse" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" />
+                        <Label Text="Username" TextColor="White" FontSize="16" VerticalOptions="Center" />
+                        <Label Text="Score" VerticalOptions="Center" TranslationX="90" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="2" WidthRequest="330" HeightRequest="70" CornerRadius="20" BackgroundColor="#353F54" BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
+                    <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
+                        <Image Source="prof_ellipse" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" />
+                        <Label Text="Username" TextColor="White" FontSize="16" VerticalOptions="Center" />
+                        <Label Text="Score" VerticalOptions="Center" TranslationX="90" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="3" WidthRequest="330" HeightRequest="70" CornerRadius="20" BackgroundColor="#353F54" BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
+                    <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
+                        <Image Source="prof_ellipse" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" />
+                        <Label Text="Username" TextColor="White" FontSize="16" VerticalOptions="Center" />
+                        <Label Text="Score" VerticalOptions="Center" TranslationX="90" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="4" WidthRequest="330" HeightRequest="70" CornerRadius="20" BackgroundColor="#353F54" BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
+                    <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
+                        <Image Source="prof_ellipse" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" />
+                        <Label Text="Username" TextColor="White" FontSize="16" VerticalOptions="Center" />
+                        <Label Text="Score" VerticalOptions="Center" TranslationX="90" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="5" WidthRequest="330" HeightRequest="70" CornerRadius="20" BackgroundColor="#353F54" BorderColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
+                    <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
+                        <Image Source="prof_ellipse" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" />
+                        <Label Text="Username" TextColor="White" FontSize="16" VerticalOptions="Center" />
+                        <Label Text="Score  " VerticalOptions="Center" TranslationX="90" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Button Text="Global"
+                        Grid.Column="0"
+                        WidthRequest="170"
+                        HeightRequest="70"
+                        BackgroundColor="White"
+                            TextColor="Black"
+                        Margin="2"/>
+
+                    <Button Text="Friends"
+                        Grid.Column="0"
+                        WidthRequest="170"
+                        HeightRequest="70"
+                        BackgroundColor="#41051E"
+                        Margin="2"/>
+                </HorizontalStackLayout>
+            </Grid>
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

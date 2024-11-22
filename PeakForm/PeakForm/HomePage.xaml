@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeakForm.HomePage"
+             Title="HomePage"
+             BackgroundImageSource="bg_home.png">
+
+    <ScrollView>
+        <StackLayout>
+            <HorizontalStackLayout>
+                <Label x:Name="FullName"
+                   FontSize="22"
+                   FontFamily="Poppins-Bold"
+                   TextColor="#F2E3E6"
+                   TranslationX="15"
+                   TranslationY="15">
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFullNameTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <ImageButton Source="prof_icon.png"
+                         WidthRequest="56"
+                         HeightRequest="56"
+                         VerticalOptions="Start"
+                         HorizontalOptions="End"
+                         TranslationY="10"
+                         TranslationX="225">
+
+                    <ImageButton.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfImageTapped"/>
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
+
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout>
+
+                <SearchBar Placeholder="Search"
+                       TextColor="#606060"
+                       WidthRequest="340"
+                       Background="#D9D9D9"
+                       HeightRequest="40"
+                       TranslationY="30"
+                       HorizontalOptions="Center"/>
+
+            </VerticalStackLayout>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <HorizontalStackLayout Grid.Column="0">
+                    <Label Text="Quest"
+                       FontSize="20"
+                       FontFamily="Poppins-Regular"
+                       TextColor="#F2E3E6"
+                       TranslationX="15"
+                       TranslationY="50"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Grid.Column="1">
+                    <Label Text="View All"
+                       TextColor="#F2E3E6"
+                       FontSize="20"
+                       FontFamily="Poppins-Regular"
+                       TranslationY="50"
+                       TranslationX="60"
+                       Margin="0,0,0,45">
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnViewAllQuestTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ScrollView Orientation="Horizontal" Grid.ColumnSpan="3">
+                    <HorizontalStackLayout>
+                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                            <Label Text="Quest 1" TextColor="White"/>
+                        </Frame>
+
+                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                            <Label Text="Quest 2" TextColor="White"/>
+                        </Frame>
+
+                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#0F469A" BorderColor="Transparent" Margin="5">
+                            <Label Text="Quest 3" TextColor="White"/>
+                        </Frame>
+                    </HorizontalStackLayout>
+                </ScrollView>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <HorizontalStackLayout Grid.Column="0">
+                    <Label Text="Penalty"
+                       FontSize="20"
+                       FontFamily="Poppins-Regular"
+                       TextColor="#F2E3E6"
+                       TranslationX="15"
+                       TranslationY="20"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Grid.Column="1">
+                    <Label Text="View All"
+                           TextColor="#F2E3E6"
+                           FontSize="20"
+                           FontFamily="Poppins-Regular"
+                           TranslationY="20"
+                           TranslationX="60"
+                           Margin="0,0,0,45">
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnViewAllPenaltyTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ScrollView Orientation="Horizontal" Grid.ColumnSpan="3" TranslationY="-30">
+                    <HorizontalStackLayout>
+                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#41051E" BorderColor="Transparent" Margin="5">
+                            <Label Text="Penalty 1" TextColor="White"/>
+                        </Frame>
+
+                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#41051E" BorderColor="Transparent" Margin="5">
+                            <Label Text="Penalty 2" TextColor="White"/>
+                        </Frame>
+
+                        <Frame WidthRequest="200" HeightRequest="100" Padding="10" CornerRadius="10" BackgroundColor="#41051E" BorderColor="Transparent" Margin="5">
+                            <Label Text="Penalty 3" TextColor="White"/>
+                        </Frame>
+                    </HorizontalStackLayout>
+                </ScrollView>
+            </Grid>
+
+            <Label Text="Shop"
+                   TextColor="White"
+                   FontSize="20"
+                   FontFamily="Poppins-Regular"
+                   Padding="10"
+                   TranslationY="-30"/>
+
+            <StackLayout Padding="20" BackgroundColor="#0F469A" WidthRequest="340" HeightRequest="30" TranslationY="-35">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Coins"
+                           FontSize="16"
+                           FontFamily="Poppins-Light"
+                           TextColor="White"                         
+                           VerticalOptions="Center"
+                           TranslationY="-20"/>
+
+                    <StackLayout Grid.Column="1" Orientation="Horizontal" Spacing="5" TranslationY="-20">
+
+                        <Image Source="points_icon.png" 
+                               WidthRequest="20" 
+                               HeightRequest="20"/> 
+
+                        <Label Text="100" 
+                               FontSize="18" 
+                               TextColor="White" 
+                               VerticalOptions="Center" />
+
+                    </StackLayout>
+                </Grid>
+
+                <Grid Padding="10" BackgroundColor="Black" ColumnSpacing="10" RowSpacing="10" WidthRequest="340" HeightRequest="250" TranslationY="-20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="White" CornerRadius="10" Padding="0" HeightRequest="80">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                            <Label Text="Remove Penalty" FontSize="16" TextColor="#582A72" HorizontalTextAlignment="Center" Padding="10"/>
+                            <HorizontalStackLayout>
+                                <Image Source="points_icon.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" Margin="0,10,0,0" TranslationX="35" TranslationY="-10"/>
+                                <Label Text="25" FontSize="20" TextColor="#582A72" TranslationX="40" TranslationY="-5"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>  
+                    </Frame>
+
+                    <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="White" CornerRadius="10" Padding="0" HeightRequest="80">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                            <Label Text="Remove Quest" FontSize="16" TextColor="#582A72" HorizontalTextAlignment="Center" Padding="10"/>
+                            <HorizontalStackLayout>
+                                <Image Source="points_icon.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" Margin="0,10,0,0" TranslationX="35" TranslationY="-10"/>
+                                <Label Text="30" FontSize="20" TextColor="#582A72" TranslationX="40" TranslationY="-5"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="White" CornerRadius="10" Padding="0" HeightRequest="80">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                            <Label Text="Protect Merit" FontSize="16" TextColor="#582A72" HorizontalTextAlignment="Center" Padding="10"/>
+                            <HorizontalStackLayout>
+                                <Image Source="points_icon.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" Margin="0,10,0,0" TranslationX="35" TranslationY="-10"/>
+                                <Label Text="35" FontSize="20" TextColor="#582A72" TranslationX="40" TranslationY="-5"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="White" CornerRadius="10" Padding="0" HeightRequest="80">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                            <Label Text="Skip Quest" FontSize="16" TextColor="#582A72" HorizontalTextAlignment="Center" Padding="10"/>
+                            <HorizontalStackLayout TranslationX="-10">
+                                <Image Source="points_icon.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" Margin="0,10,0,0" TranslationX="35" TranslationY="-10"/>
+                                <Label Text="50" FontSize="20" TextColor="#582A72" TranslationX="40" TranslationY="-5"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

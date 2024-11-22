@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeakForm.PenaltyPage"
+             Title="PenaltyPage"
+             BackgroundColor="#091423">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Quest"
+                   FontSize="30"
+                   FontFamily="Poppins-ExtraBold"
+                   HorizontalOptions="Center"
+                   Padding="20"
+                   TextColor="#F7D1D9"/>
+
+            <Label Text="Today's Penalty"
+                   FontSize="20"
+                   FontFamily="OpenSans-SemiBold"
+                   TextColor="#F7D1D9"
+                   HorizontalOptions="Start"
+                   Padding="15"
+                   TranslationY="15"/>
+
+            <Grid>
+                <Image Source="penalty_bg"
+                   HorizontalOptions="CenterAndExpand"
+                   TranslationY="-50"/>
+            </Grid>
+
+            <Label Text="Penalty History"
+                   FontSize="20"
+                   FontFamily="Poppins-SemiBold"
+                   TextColor="#F7D1D9"
+                   Padding="15" TranslationY="-130"/>
+
+            <Grid TranslationY="-140">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Frame Grid.Row="0" WidthRequest="320" HeightRequest="100" BackgroundColor="#0A0909" BorderColor="White" Margin="10">
+
+                </Frame>
+
+                <Frame Grid.Row="1" WidthRequest="320" HeightRequest="100" BackgroundColor="#0A0909" BorderColor="White" Margin="10">
+
+                </Frame>
+
+                <Frame Grid.Row="2" WidthRequest="320" HeightRequest="100" BackgroundColor="#0A0909" BorderColor="White" Margin="10">
+
+                </Frame>
+            </Grid>
+
+            <ImageButton Source="close_btn.png"
+                         HorizontalOptions="Center"
+                         Padding="10"
+                         TranslationY="-130"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

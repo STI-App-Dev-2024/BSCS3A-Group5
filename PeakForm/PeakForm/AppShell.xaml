@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PeakForm.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PeakForm"
+    Shell.FlyoutBehavior="Disabled"
+    Title="PeakForm">
+
+    <ShellContent
+        Title="AboutPage"
+        ContentTemplate="{DataTemplate local:AboutPage}"
+        Route="AboutPage"/>
+
+    <ShellContent
+        Title="AboutPage2"
+        ContentTemplate="{DataTemplate local:AboutPage2}"
+        Route="AboutPage2"/>
+
+    <ShellContent
+        Title="LoginPage"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage"/>
+
+    <ShellContent
+        Title="SignUpPage"
+        ContentTemplate="{DataTemplate local:SignUpPage}"
+        Route="SignUpPage"/>
+
+    <ShellContent
+        Title="'HomePage"
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage"/>
+
+    <ShellContent
+        Title="'QuestPage"
+        ContentTemplate="{DataTemplate local:QuestPage}"
+        Route="QuestPage"/>
+
+    <ShellContent
+         Title="PenaltyPage"
+         ContentTemplate="{DataTemplate local:PenaltyPage}"
+         Route="PenaltyPage"/>
+
+    <ShellContent
+         Title="PenaltyInfoPage"
+         ContentTemplate="{DataTemplate local:PenaltyInfoPage}"
+         Route="PenaltyInfoPage"/>
+
+    <ShellContent
+         Title="PushUpPage"
+         ContentTemplate="{DataTemplate local:PushUpPage}"
+         Route="PushUpPage"/>
+    <ShellContent
+         Title="JoggingPage"
+         ContentTemplate="{DataTemplate local:JoggingPage}"
+         Route="JoggingPage"/>
+
+    <ShellContent
+         Title="SitUpsPage"
+         ContentTemplate="{DataTemplate local:SitUpsPage}"
+         Route="SitUpsPage"/>
+
+    <ShellContent
+         Title="RewardsPage"
+         ContentTemplate="{DataTemplate local:RewardsPage}"
+         Route="RewardsPage"/>
+
+    <ShellContent
+         Title="SettingsPage"
+         ContentTemplate="{DataTemplate local:SettingsPage}"
+         Route="SettingsPage"/>
+
+    <ShellContent
+        Title="'QuestInfoPage"
+        ContentTemplate="{DataTemplate local:QuestInfoPage}"
+        Route="QuestInfoPage"/>
+
+    <ShellContent
+        Title="ProfilePage"
+        ContentTemplate="{DataTemplate local:ProfilePage}"
+        Route="ProfilePage"/>
+
+    <ShellContent
+        Title="FriendProfile"
+        ContentTemplate="{DataTemplate local:FriendProfile}"
+        Route="FriendProfile"/>
+
+    <!--<TabBar>
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+        </Tab>
+
+        <Tab Title="Rewards" Icon="rewards_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:RewardsPage}" />
+        </Tab>
+
+        <Tab Title="Leaderboard" Icon="leaderboard_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:LeaderboardPage}" />
+        </Tab>
+
+        <Tab Title="Settings" Icon="settings_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
+        </Tab>
+
+        <Tab Title="Profile" Icon="profile_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}" />
+        </Tab>
+    </TabBar> -->
+
+</Shell>

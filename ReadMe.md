@@ -1,6 +1,6 @@
 # **PeakForm**
 
-## **Colaborators**
+## **Collaborators**
 
 - Jay Tinosa
 - John Kristoffer D. Miranda
