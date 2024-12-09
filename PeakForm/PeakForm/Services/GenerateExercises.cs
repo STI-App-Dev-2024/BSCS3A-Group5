@@ -12,20 +12,24 @@ public class GenerateExercises {
     private string[] ExerciseName = { "Jogging", "Running", "Push Up", "Curl Ups", "Jumping Jacks" };
     private int jogging, pushup, running, jumpingJacks;
     private readonly Random random = new Random(0);
+
     private readonly INavigation _navigationFireServices;
     public GenerateExercises(INavigation navigationFireServices) { 
         _navigationFireServices = navigationFireServices;
     }
 
-    public  Exercises GenerateExercise(string UserBodyType)
+    public  Quests GenerateExercise(string UserBodyType)
     {
+        int ran = random.Next(1, 5);
+        int ran2, ran3;
         if (UserBodyType.Equals("Normalweight"))
         {
             // For Normalweight users, choose random exercises with moderate intensity
-            int ran = random.Next(0, 5); // Random index for exercises
-            var exercise = new Exercises
+            // Random index for exercises
+            var exercise = new Quests
             {
                 Title = "Moderate Quest",
+                Description = "A balanced workout for maintaining fitness.",
                 FirstExerciseSet = JoggingKM[ran % JoggingKM.Length],
                 SecondExerciseSet = PushUp[ran % PushUp.Length],
                 ThirdexerciseSet = Jumpingjacks[ran % Jumpingjacks.Length],
@@ -38,22 +42,32 @@ public class GenerateExercises {
         else if (UserBodyType.Equals("Underweight"))
         {
             // For Underweight users, provide a more intense workout to gain strength
-            int ran = random.Next(1, 5); // More intense exercises
-            var exercise = new Exercises {
+           // More intense exercises
+            do
+            {
+                ran2 = random.Next(1, 5);
+            } while (ran != ran2);
+            do { 
+                ran3 = random.Next(1, 5);
+            }while (ran3 != ran2 && ran3 != ran);
+            var exercise = new Quests
+            {
                 Title = "Medium Quest",
+                Description = "An intense workout to build strength.",
                 FirstExerciseSet = JoggingKM[ran % JoggingKM.Length],
-                SecondExerciseSet = PushUp[ran % PushUp.Length],
-                ThirdexerciseSet = Jumpingjacks[ran % Jumpingjacks.Length],
+                SecondExerciseSet = PushUp[ran2 % PushUp.Length],
+                ThirdexerciseSet = Jumpingjacks[ran3 % Jumpingjacks.Length],
                 FirstDescription = ExerciseName[ran],
-                SecondDescription = ExerciseName[ran],
-                ThirdDescription = ExerciseName[ran]
+                SecondDescription = ExerciseName[ran2],
+                ThirdDescription = ExerciseName[ran3]
             };
             return exercise;
         }
         else {
-            var exercise = new Exercises
+            var exercise = new Quests
             {
                 Title = "Light Quest",
+                Description = "A light workout to stay active.",
                 FirstExerciseSet = JoggingKM[0],
                 SecondExerciseSet = PushUp[0],
                 ThirdexerciseSet = Jumpingjacks[0],

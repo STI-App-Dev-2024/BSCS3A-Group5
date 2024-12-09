@@ -80,7 +80,7 @@
                     HeightRequest="50"
                     WidthRequest="330"
                     FontAttributes="Bold"
-                    Command="{Binding LoginUserTappedAsysncCommand}"/>
+                    Command="{Binding LoginUserTappedAsyncCommand}"/>
         </Frame>
         
 

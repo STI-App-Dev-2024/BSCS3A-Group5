@@ -6,24 +6,60 @@ namespace PeakForm.Model;
 public class Quests
 {
     [FirestoreProperty]
-    public string Id { 
-        get; 
-        set; 
+    public string Id
+    {
+        set;
+        get;
     }
+
     [FirestoreProperty]
     public string Title
     {
-        get;
         set;
+        get;
     }
     [FirestoreProperty]
-    public string Description
-    {
-        get;
+    public string Description {
         set;
+        get;
     }
-    
+    [FirestoreProperty]
+    public string FirstDescription
+    {
+        set;
+        get;
 
+    }
+    [FirestoreProperty]
+    public int FirstExerciseSet
+    {
+        set;
+        get;
+    }
+    [FirestoreProperty]
+    public string SecondDescription
+    {
+        set;
+        get;
+    }
+    [FirestoreProperty]
+    public int SecondExerciseSet
+    {
+        set;
+        get;
+    }
+    [FirestoreProperty]
+    public string ThirdDescription
+    {
+        set;
+        get;
 
-    
+    }
+    [FirestoreProperty]
+    public int ThirdexerciseSet
+    {
+        set;
+        get;
+    }
+
 }

@@ -89,7 +89,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <CollectionView ItemsSource="{Binding QuestData}" Grid.ColumnSpan="3">
+                <CollectionView ItemsSource="{Binding QuestData}" Grid.ColumnSpan="3" SelectionChanged="OnItemSelect">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="local:Quests">
                             <HorizontalStackLayout>

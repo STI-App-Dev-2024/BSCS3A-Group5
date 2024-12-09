@@ -2,6 +2,7 @@
 
 using Google.Cloud.Firestore;
 
+
 namespace PeakForm.Model;
 [FirestoreData]
 public class Users {
@@ -19,5 +20,6 @@ public class Users {
     public string BodyType { get; set; }
     [FirestoreProperty]
     public DateTime CreateAt { get; set; }
+
 
 }

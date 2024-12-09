@@ -38,8 +38,8 @@ class FireStoreServices {
     public async Task CreateAccount(UserAccount useraccount) {
         if (useraccount == null) throw new ArgumentNullException(nameof(useraccount));
         await SetUpFireStore();
-        string username = useraccount.UserName;
-        DocumentReference userdoc = db.Collection("UserAccount").Document(username);
+        string email = useraccount.Email;
+        DocumentReference userdoc = db.Collection("UserAccount").Document(email);
         try {
             await userdoc.SetAsync(useraccount);
         }
@@ -49,28 +49,24 @@ class FireStoreServices {
 
 
     }
-    public async Task CreateUserAndExercise(Users user, Exercises exercise)
+    public async Task CreateUserAndExercise(Users user, Quests quest)
     {
-        if (user == null) throw new ArgumentNullException(nameof(user));
-        if (exercise == null) throw new ArgumentNullException(nameof(exercise));
+        if (user == null) throw new ArgumentNullException(nameof(quest));
+        if (quest == null) throw new ArgumentNullException(nameof(quest));
 
         await SetUpFireStore(); // Ensure this is optimized and not redundantly called.
 
         string username = user.UserName;
-        string exerciseTitle = exercise.Title;
+        string exerciseTitle = quest.Title;
 
         // Document reference
         DocumentReference userDoc = db.Collection("User").Document(username);
         DocumentReference exerciseDoc = userDoc.Collection("Quest").Document(exerciseTitle);
-    
-
         try
         {
             // Save the exercise object
             await userDoc.SetAsync(user);
-            await exerciseDoc.SetAsync(exercise);
-            Console.WriteLine("Exercise data saved successfully.");
-            Console.WriteLine("added Document ID {0}" , userDoc.Id, exerciseDoc.Id);
+            await exerciseDoc.SetAsync(quest);
         }
         catch (Exception ex)
         {
@@ -78,7 +74,38 @@ class FireStoreServices {
             // Additional error handling (e.g., retry or logging)
         }
     }
+    /*public async Task<List<Quests>> GetQuestsAsync(string username)
+    {
+        try
+        {
+            // Initialize Firestore
+            await SetUpFireStore();
 
+            // Prepare a list to store quests
+            var Questtitle = new List<Quests>();
+
+            // Access the Quests subcollection under the User document
+            var collection = await db.Collection("User")
+                                     .Document(username)
+                                     .Collection("Quests")
+                                     .GetSnapshotAsync();
+
+            foreach (var document in collection.Documents) {
+                if (document.Exists) {
+                    Quests quests = document.ConvertTo<Quests>();
+                    Questtitle.Add(quests);
+                }
+            }
+            return Questtitle;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching quests for username {username}: {ex.Message}");
+            return new List<Quests>(); // Return an empty list in case of an error
+        }
+    }
+
+    */
     /* public async Task StartListeningToCollection(string collectionName, Action<List<Dictionary<string, object>>> onDataUpdate)
      {
          await SetUpFireStore();
@@ -99,65 +126,54 @@ class FireStoreServices {
              onDataUpdate(dataList);
          });
      }*/
-    public async Task<List<Exercises>> GetExercises(string username)
+    public async Task<List<Quests>> GetQuestsAsync(string username)
     {
         await SetUpFireStore();
         var data = await db
                         .Collection("User").Document(username).Collection("Quest")
                         .GetSnapshotAsync();
-        var exercises = data.Documents
+        var quests = data.Documents
             .Select(doc =>
             {
-                var exercises = doc.ConvertTo<Exercises>();
-                exercises.ID = doc.Id; // FirebaseId hinzufügen
+                var exercises = doc.ConvertTo<Quests>();
+                exercises.Id = doc.Id; // FirebaseId hinzufügen
                 return exercises;
             })
             .ToList();
-        return exercises;
+        return quests;
     }
-    public async Task<List<string>> GetStringsAsync(string username)
+    public async Task<string> GetUserNameAsync(string email)
     {
         try
         {
+            // Setup Firestore connection
             await SetUpFireStore();
-            CollectionReference docref = db.Collection("User")
-                .Document(username)
-                .Collection("Quest");
-            QuerySnapshot snapshot = await docref.GetSnapshotAsync();
-            return snapshot.Documents.Select(doc => doc.Id).ToList();
-        }
-        catch (Exception ex) {
-            Console.WriteLine($"Error retrieving exercise titles: {ex.Message}");
-            return new List<string>();
-        }
-    }
-   /* public async Task<string> GetUserNameAync()
-    {
-            
-        await SetUpFireStore();
-        DocumentReference data = db.Collection("UserAccount").GetSnapshotAsync();
 
-        try {
-            DocumentSnapshot snapshot = await data.GetSnapshotAsync();
+            // Reference the document in the "UserAccount" collection
+            DocumentReference docRef = db.Collection("UserAccount").Document(email);
+
+            // Get the document snapshot
+            DocumentSnapshot snapshot = await docRef.GetSnapshotAsync();
+
+            // Check if the document exists
             if (snapshot.Exists)
             {
-                Console.WriteLine("Document data for {0} document:", snapshot.Id);
-                UserAccount Useraccount = snapshot.ConvertTo<UserAccount>();
-                return Useraccount.UserName;
-
-
+                // Retrieve the "UserName" field from the document
+                string userName = snapshot.GetValue<string>("UserName");
+                return userName;
             }
-            else {
+            else
+            {
+                Console.WriteLine($"Document with email {email} does not exist.");
                 return null;
-            
             }
-
-        } catch (Exception e) {
-            return "Document {0} does not exist!";
-
         }
-    }*/
-
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving UserName: {ex.Message}");
+            return null;
+        }
+    }
 
     public async Task DeleteDocumentAsync(string collectionName, string documentId)
     {

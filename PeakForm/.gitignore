@@ -53,4 +53,5 @@ artifacts/
 *.metadata.v9.bin
 *.projects.v9.bin
 
+# Ignore admin-sdk.json
 PeakForm/PeakForm/Resources/Raw/admin-sdk.json

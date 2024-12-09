@@ -11,44 +11,49 @@ public partial class HomePage : ContentPage
     FireStoreServices fireStoreServices;
 
     
-    public HomePage()
+    public HomePage(string email)
     {
         InitializeComponent();
-        BindingContext = new HomePageViewModel(Navigation);
+        BindingContext = new HomePageViewModel(Navigation,email);
 
     }
 
-    protected override async void OnAppearing()
-    {
-        base.OnAppearing();
-
-        // Access the ViewModel if it's set as the BindingContext
-        var viewModel = BindingContext as HomePageViewModel;
-
-        if (viewModel != null)
-        {
-            // Call the ViewModel's LoadItemsAsync method
-          //  await viewModel.LoadItemsAsync();
-        }
-    }
+    
 
 
     private async void OnFullNameTapped(object sender, EventArgs e)
     {
+        await Navigation.PopAsync();
         await Navigation.PushAsync(new ProfilePage());
     }
 
     private async void OnProfImageTapped(object sender, EventArgs e)
     {
+        await Navigation.PopAsync();
         await Navigation.PushAsync(new ProfilePage());
     }
 
     private async void OnViewAllQuestTapped(object sender, EventArgs e)
     {
+        await Navigation.PopAsync();
         await Navigation.PushAsync(new QuestPage());
+        
     }
     private async void OnViewAllPenaltyTapped(object sender, EventArgs e)
     {
+        await Navigation.PopAsync();
         await Navigation.PushAsync(new PenaltyPage());
     }
+
+    private async void OnItemSelect(object sender, SelectionChangedEventArgs e)
+    {
+        var selectedItem = e.CurrentSelection.FirstOrDefault() as Quests; // Cast to the appropriate type
+
+        if (selectedItem != null)
+        {
+            await Navigation.PushAsync(new QuestInfoPage(selectedItem));
+        }
+
+    }
+
 }

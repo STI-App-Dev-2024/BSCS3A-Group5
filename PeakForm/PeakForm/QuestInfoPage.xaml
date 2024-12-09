@@ -40,18 +40,24 @@
 
                     <VerticalStackLayout Spacing="5">
                         <Grid ColumnDefinitions="*,Auto" Margin="10">
-                            <Label Text="RUNNING" TextColor="White" FontSize="16" Grid.Column="0"/>
-                            <Label Text="[0/5KM]" TextColor="White" FontSize="16" Grid.Column="1" HorizontalOptions="End"/>
+                            <!-- Label for First Description -->
+                            <Label x:Name="FirstDescriptionLabel" TextColor="White" FontSize="16" Grid.Column="0"/>
+                            <!-- Label for First Exercise Set -->
+                            <Label x:Name="FirstExerciseSetLabel" TextColor="White" FontSize="16" Grid.Column="1" HorizontalOptions="End"/>
                         </Grid>
 
                         <Grid ColumnDefinitions="*,Auto" Margin="10">
-                            <Label Text="PUSH-UPS" TextColor="White" FontSize="16" Grid.Column="0"/>
-                            <Label Text="[0/30]" TextColor="White" FontSize="16" Grid.Column="1" HorizontalOptions="End"/>
+                            <!-- Label for Second Description -->
+                            <Label x:Name="SecondDescriptionLabel" TextColor="White" FontSize="16" Grid.Column="0"/>
+                            <!-- Label for Third Exercise Set -->
+                            <Label x:Name="SecondExerciseSetLabel" TextColor="White" FontSize="16" Grid.Column="1" HorizontalOptions="End"/>
                         </Grid>
 
                         <Grid ColumnDefinitions="*,Auto" Margin="10">
-                            <Label Text="BURPEES" TextColor="White" FontSize="16" Grid.Column="0"/>
-                            <Label Text="[0/50]" TextColor="White" FontSize="16" Grid.Column="1" HorizontalOptions="End"/>
+                            <!-- Label for Third Description -->
+                            <Label x:Name="ThirdDescriptionLabel" TextColor="White" FontSize="16" Grid.Column="0"/>
+                            <!-- Label for Third Exercise Set -->
+                            <Label x:Name="ThirdExerciseSetLabel" TextColor="White" FontSize="16" Grid.Column="1" HorizontalOptions="End"/>
                         </Grid>
                     </VerticalStackLayout>
 

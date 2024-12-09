@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using PeakForm.Model;
 
+
 namespace PeakForm.Services;
 
 public class AuthServices{
@@ -22,7 +23,9 @@ public class AuthServices{
             var serializedContent = JsonConvert.SerializeObject(content);
             Preferences.Set("FreshFirebaseToken", serializedContent);
             await Shell.Current.DisplayAlert("Alert!", "User Login! Succesfully", "OK");
-            await _navigationService.PushAsync(new HomePage());
+
+            await _navigationService.PushAsync(new HomePage(Email));
+
         }
         catch (Exception ex)
         {
@@ -53,18 +56,20 @@ public class AuthServices{
                     CreateAt = DateTime.Now
 
                 };
-                var user = new Users { 
+                var user = new Users
+                {
                     ID = uid,
-                    UserName = userName,
+                    UserName=userName,
                     BMI = bmi.CalculateBMI(weight, height),
                     BodyType = bmi.InterpretBMI(bmi.CalculateBMI(weight, height)),
-                    CreateAt = DateTime.Now
+                    CreateAt =  DateTime.Now
                 };
-               
-                var exercise = generate.GenerateExercise(bmi.InterpretBMI(bmi.CalculateBMI(weight, height)));
+                
+
+                Quests quests = generate.GenerateExercise(bmi.InterpretBMI(bmi.CalculateBMI(weight, height)));
                 await _firebaseStoreServices.CreateAccount(userAccount);
-                await _firebaseStoreServices.CreateUserAndExercise(user, exercise);
-                await  Shell.Current.DisplayAlert("Alert!", "User Registerd Succesfully", "OK");
+                await _firebaseStoreServices.CreateUserAndExercise(user, quests);
+                await Shell.Current.DisplayAlert("Alert!", "User Registerd Succesfully", "OK");
                 await _navigationService.PushAsync(new LoginPage());
             }
         }
