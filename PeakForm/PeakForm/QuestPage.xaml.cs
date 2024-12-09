@@ -9,6 +9,6 @@ public partial class QuestPage : ContentPage
 
 	private async void CloseButtonClicked(object sender, EventArgs e) 
 	{
-		await Navigation.PushAsync(new HomePage());
+		await Navigation.PushAsync(new HomePage(null));
 	}
 }

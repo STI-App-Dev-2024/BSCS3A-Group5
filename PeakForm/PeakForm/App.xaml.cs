@@ -1,4 +1,7 @@
-﻿namespace PeakForm
+﻿using PeakForm.newWindow;
+using PeakForm.ViewModel;
+
+namespace PeakForm
 {
     public partial class App : Application
     {
@@ -8,5 +11,6 @@
 
             MainPage = new AppShell();
         }
+      
     }   
 }
